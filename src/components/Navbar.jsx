@@ -15,10 +15,15 @@ const Nav = styled.div`
 
 const NavItem = styled.div`
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
+
+  .nav-link {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-decoration: none;
+  }
 `;
 
 const Label = styled.label`
@@ -35,28 +40,28 @@ const Navbar = () => {
   return (
     <Nav>
       <NavItem>
-        <Link to="/">
+        <Link className="nav-link" to="/">
           <Img src="../../../images/explore.svg"></Img>
+          <Label>Home</Label>
         </Link>
-        <Label>Home</Label>
       </NavItem>
       <NavItem>
-        <Link to="/search">
+        <Link className="nav-link" to="/search">
           <Img src="../../../images/search.svg"></Img>
+          <Label>Search</Label>
         </Link>
-        <Label>Search</Label>
       </NavItem>
       <NavItem>
-        <Link to="/mybar">
+        <Link className="nav-link" to="/mybar">
           <Img src="../../../images/my-bar.svg"></Img>
+          <Label>My Bar</Label>
         </Link>
-        <Label>My Bar</Label>
       </NavItem>
       <NavItem>
-        <Link to="/favorites">
+        <Link className="nav-link" to="/favorites">
           <Img src="../../../images/favorites.svg"></Img>
+          <Label>Favorites</Label>
         </Link>
-        <Label>Favorites</Label>
       </NavItem>
     </Nav>
   );
