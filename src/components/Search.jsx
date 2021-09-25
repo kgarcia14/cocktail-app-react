@@ -5,15 +5,19 @@ import DisplayCocktail from "./DisplayCocktail";
 
 const Container = styled.div`
   display: flex;
-  height: 75vh;
   flex-direction: column;
   justify-content: center;
 `;
 
 const Form = styled.form`
+  width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
+  align-items: center;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.95);
 `;
 
 const Label = styled.label`
@@ -21,8 +25,6 @@ const Label = styled.label`
   flex-direction: column;
   align-items: flex-start;
   color: #393939;
-  position: fixed;
-  top: 0;
 `;
 
 const Input = styled.input`
@@ -37,9 +39,16 @@ const H2 = styled.h2`
   font-size: 2.2rem;
   font-weight: 500;
   padding: 0 50px;
+  margin: 150px 0 0 0;
   color: #393939;
-  margin-top: 50px;
   text-align: center;
+`;
+
+const H4 = styled.h4`
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #31d0aa;
+  margin: 150px 0 0 0;
 `;
 
 const CocktailContainer = styled.div``;
@@ -105,11 +114,9 @@ const Search = () => {
       <H2 id="heading">Search for your favorite cocktail!</H2>
       
         {cocktails === null ? (
-          <h4>{errorMessage}</h4>
+          <H4>{errorMessage}</H4>
         ) : (
-          <div>
           <DisplayCocktail cocktails={cocktails} />
-          </div>
         )}
         
     </Container>
