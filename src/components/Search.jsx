@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { useState } from "react";
 import axios from "axios";
+import DisplayCocktail from "./DisplayCocktail";
 
 const Container = styled.div`
   display: flex;
@@ -20,6 +21,8 @@ const Label = styled.label`
   flex-direction: column;
   align-items: flex-start;
   color: #393939;
+  position: fixed;
+  top: 0;
 `;
 
 const Input = styled.input`
@@ -39,26 +42,50 @@ const H2 = styled.h2`
   text-align: center;
 `;
 
-const Search = () => {
-  const [inputValue, setInputValue] = useState('');
+const CocktailContainer = styled.div``;
 
-  const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${inputValue}`;
+const Search = () => {
+  const [inputValue, setInputValue] = useState("");
+  const [cocktails, setCocktails] = useState([]);
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const getCocktailByName = async () => {
+    await axios
+      .get(
+        `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${inputValue}`
+      )
+      .then((res) => {
+        const data = res.data.drinks;
+        console.log(res);
+        console.log(res.data.drinks);
+        setCocktails(data);
+
+        if (data === null) {
+          setErrorMessage("Please enter a valid cocktail!");
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  // const getCocktailId = () => {
+
+  // }
+
+  // const getCocktailDetails = () => {
+
+  // }
 
   const _handleSubmit = (e) => {
     e.preventDefault();
-    axios.get(url)
-        .then((res) => {
-            console.log(res);
-            console.log(res.data.drinks[0].strInstructions)
-        })
-        .catch((error) => {
-            console.log(error);
-        })
-        .then(() => {
-            
-        });
-        
-        setInputValue('');
+    getCocktailByName();
+
+    setInputValue("");
+
+    const heading = document.querySelector("#heading");
+
+    heading.classList.add("hidden");
   };
 
   return (
@@ -75,7 +102,16 @@ const Search = () => {
         </Label>
       </Form>
 
-      <H2>Search for your favorite cocktail!</H2>
+      <H2 id="heading">Search for your favorite cocktail!</H2>
+      
+        {cocktails === null ? (
+          <h4>{errorMessage}</h4>
+        ) : (
+          <div>
+          <DisplayCocktail cocktails={cocktails} />
+          </div>
+        )}
+        
     </Container>
   );
 };
