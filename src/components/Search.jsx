@@ -17,7 +17,8 @@ const Form = styled.form`
   height: 60px;
   position: fixed;
   top: 0;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: #fff;
+  z-index: 1;
 `;
 
 const Label = styled.label`
@@ -51,8 +52,6 @@ const H4 = styled.h4`
   margin: 150px 0 0 0;
 `;
 
-const CocktailContainer = styled.div``;
-
 const Search = () => {
   const [inputValue, setInputValue] = useState("");
   const [cocktails, setCocktails] = useState([]);
@@ -77,14 +76,6 @@ const Search = () => {
         console.log(error);
       });
   };
-
-  // const getCocktailId = () => {
-
-  // }
-
-  // const getCocktailDetails = () => {
-
-  // }
 
   const _handleSubmit = (e) => {
     e.preventDefault();
