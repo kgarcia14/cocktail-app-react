@@ -35,7 +35,7 @@ const Button = styled.button`
 `;
 
 const Img = styled.img`
-  width: 75px;
+  width: 50px;
   pointer-events: none;
 `;
 
