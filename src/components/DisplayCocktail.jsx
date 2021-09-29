@@ -58,10 +58,15 @@ const Button = styled.button`
 `;
 
 const DisplayCocktail = ({ cocktails, errorMessage }) => {
+  
+  const handleReload = () =>{ 
+    window.location.reload(); 
+}
+
   return (
     <>
       {cocktails === null ? (
-        <H4>{errorMessage}</H4>
+        {handleReload}
       ) : (
         <Ul>
           {cocktails.map((cocktail) => (
