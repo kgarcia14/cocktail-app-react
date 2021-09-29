@@ -4,11 +4,10 @@ import axios from "axios";
 import DisplayCocktail from "./DisplayCocktail";
 
 const Container = styled.form`
-  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 10px;
 `;
 
 const Row = styled.div`
@@ -18,18 +17,22 @@ const Row = styled.div`
 `;
 
 const Wrapper = styled.div`
-
-`;
-
-const Button = styled.button`
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-end;
   border: 1px solid #eee;
   border-radius: 5px;
   width: 100px;
   height: 120px;
+`;
+
+const Button = styled.button`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  border: none;
   background: none;
   font-size: 1rem;
 `;
@@ -37,16 +40,17 @@ const Button = styled.button`
 const Img = styled.img`
   width: 50px;
   pointer-events: none;
+  margin-bottom: 10px;
 `;
 
 const Label = styled.label`
-  margin: 5px 0;
+  margin: 0 0 5px 0;
 `;
 
 const H2 = styled.h2`
-  font-size: 1.8rem;
-  margin-top: 30px;
-  padding: 0 50px;
+  font-size: 1.7rem;
+  margin-top: 20px;
+  padding: 0 40px;
 `;
 
 const MyBar = () => {
