@@ -45,28 +45,45 @@ const H3 = styled.h3`
   letter-spacing: 1.8px;
 `;
 
+const H4 = styled.h4`
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #31d0aa;
+  margin: 150px 0 0 0;
+`;
+
 const Button = styled.button`
   border: none;
   background: none;
 `;
 
 const DisplayCocktail = ({ cocktails, errorMessage }) => {
-  
   return (
-    <Ul>
-      {cocktails.map((cocktail) => (
-        <Li key={cocktail.idDrink} id={cocktail.idDrink}>
-          <ImgWrapper>
-            <H3>{cocktail.strDrink}</H3>
-            <Img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
-            <ImgContent>
-            <CocktailModal cocktail={cocktail} errorMessage={errorMessage} />
-            <Button type="button"><Img src="../../../images/heart-outline.svg"></Img></Button>
-            </ImgContent>
-          </ImgWrapper>
-        </Li>
-      ))}
-    </Ul>
+    <>
+      {cocktails === null ? (
+        <H4>{errorMessage}</H4>
+      ) : (
+        <Ul>
+          {cocktails.map((cocktail) => (
+            <Li key={cocktail.idDrink} id={cocktail.idDrink}>
+              <ImgWrapper>
+                <H3>{cocktail.strDrink}</H3>
+                <Img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
+                <ImgContent>
+                  <CocktailModal
+                    cocktail={cocktail}
+                    errorMessage={errorMessage}
+                  />
+                  <Button type="button">
+                    <Img src="../../../images/heart-outline.svg"></Img>
+                  </Button>
+                </ImgContent>
+              </ImgWrapper>
+            </Li>
+          ))}
+        </Ul>
+      )}
+    </>
   );
 };
 
