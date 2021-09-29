@@ -1,64 +1,73 @@
 import styled from "styled-components";
+import CocktailModal from "./CocktailModal";
 
 const Ul = styled.ul`
-    margin:75px 0 70px 0;
-    padding: 0;
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+  margin: 80px 0 70px 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 `;
 
 const Li = styled.li`
-    display: flex;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
 `;
 
 const ImgWrapper = styled.div`
-    width: 85%;
-    display: flex;
-    flex-direction: column;
-    align-items:center;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const Img = styled.img`
-    width: 100%;
-    border-radius: 8px;
+  width: 100%;
+  border-radius: 8px;
+  margin: 5px 0 5px 0;
 `;
 
 const ImgContent = styled.div`
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items:flex-start;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 `;
 
-const P = styled.p`
-    margin: 0;
-    padding: 0;
+const H3 = styled.h3`
+  margin: 0;
+  padding: 0;
+  color: #393939;
+  letter-spacing: 1.8px;
 `;
 
+const Button = styled.button`
+  border: none;
+  background: none;
+`;
 
+const DisplayCocktail = ({ cocktails, errorMessage }) => {
+  
+  return (
+    <Ul>
+      {cocktails.map((cocktail) => (
+        <Li key={cocktail.idDrink} id={cocktail.idDrink}>
+          <ImgWrapper>
+            <H3>{cocktail.strDrink}</H3>
+            <Img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
+            <ImgContent>
+            <CocktailModal cocktail={cocktail} errorMessage={errorMessage} />
+            <Button type="button"><Img src="../../../images/heart-outline.svg"></Img></Button>
+            </ImgContent>
+          </ImgWrapper>
+        </Li>
+      ))}
+    </Ul>
+  );
+};
 
-const DisplayCocktail = ({ cocktails }) => {
-    return (
-        <Ul>
-            {cocktails.map(cocktail => (
-                <Li key={cocktail.idDrink}>
-                    <ImgWrapper>
-                        <Img src={cocktail.strDrinkThumb} alt={cocktail.strDrink}/>
-                        <ImgContent>
-                            <P>{cocktail.strDrink}</P>
-                            <P>{cocktail.strDrink}</P>
-                            <P>{cocktail.strDrink}</P>
-                        </ImgContent>
-                    </ImgWrapper>
-                </Li>
-            ))}
-        </Ul>
-     );
-    
-}
- 
 export default DisplayCocktail;

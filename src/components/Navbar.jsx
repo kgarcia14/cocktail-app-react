@@ -11,6 +11,7 @@ const Nav = styled.div`
   height: 65px;
   justify-content: space-around;
   align-items: center;
+  z-index: 1;
 `;
 
 const NavItem = styled.div`
