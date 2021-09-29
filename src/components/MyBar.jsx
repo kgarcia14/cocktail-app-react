@@ -29,13 +29,13 @@ const Button = styled.button`
   border: 1px solid #eee;
   border-radius: 5px;
   width: 100px;
-  height: 100px;
+  height: 120px;
   background: none;
   font-size: 1rem;
 `;
 
 const Img = styled.img`
-  width: 50px;
+  width: 75px;
   pointer-events: none;
 `;
 
@@ -86,7 +86,7 @@ const MyBar = () => {
               </Wrapper>
               <Wrapper>
                 <Button type="submit" value="tequila" onClick={handleClick}>
-                  <Img src="../../../images/my-bar.svg" alt=""></Img>
+                  <Img src="../../../images/tequila.png" alt=""></Img>
                   Tequila
                 </Button>
               </Wrapper>
