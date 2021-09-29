@@ -6,22 +6,25 @@ import DisplayCocktail from "./DisplayCocktail";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
 `;
 
 const Form = styled.form`
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 60px;
+  align-items: flex-end;
+  height: 65px;
   position: fixed;
   top: 0;
   background-color: #fff;
   z-index: 1;
+  
 `;
 
 const Label = styled.label`
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -29,11 +32,14 @@ const Label = styled.label`
 `;
 
 const Input = styled.input`
-  width: 200px;
-  height: 25px;
-  border: none;
-  background-color: #eee;
+  width: 100%;
+  height: 30px;
+  font-size: 1rem;
+  padding: 0;
+  border: 1px solid #dddddd;
   border-radius: 5px;
+  outline-color:#31d0aa;
+  box-shadow: 0 8px 20px -9px #3f3d56;
 `;
 
 const H2 = styled.h2`
@@ -77,7 +83,7 @@ const Search = () => {
       });
   };
 
-  const _handleSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     getCocktailByName();
 
@@ -90,7 +96,7 @@ const Search = () => {
 
   return (
     <Container>
-      <Form onSubmit={_handleSubmit}>
+      <Form onSubmit={handleSubmit}>
         <Label>
           Search Cocktail
           <Input
@@ -107,7 +113,7 @@ const Search = () => {
         {cocktails === null ? (
           <H4>{errorMessage}</H4>
         ) : (
-          <DisplayCocktail cocktails={cocktails} />
+          <DisplayCocktail cocktails={cocktails} errorMessage={errorMessage} />
         )}
         
     </Container>
