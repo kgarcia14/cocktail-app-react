@@ -25,7 +25,7 @@ const Button = styled.button`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   border: 1px solid #eee;
   border-radius: 5px;
   width: 100px;
@@ -37,6 +37,10 @@ const Button = styled.button`
 const Img = styled.img`
   width: 50px;
   pointer-events: none;
+`;
+
+const Label = styled.label`
+  margin: 5px 0;
 `;
 
 const H2 = styled.h2`
@@ -74,60 +78,60 @@ const MyBar = () => {
             <Row>
               <Wrapper>
                 <Button type="submit" value="vodka" onClick={handleClick}>
-                  <Img src="../../../images/my-bar.svg" alt=""></Img>
-                  Vodka
+                  <Img src="../../../images/vodka.png" alt="vodka"></Img>
+                  <Label>Vodka</Label>
                 </Button>
               </Wrapper>
               <Wrapper>
                 <Button type="submit" value="gin" onClick={handleClick}>
-                  <Img src="../../../images/my-bar.svg" alt=""></Img>
-                  Gin
+                  <Img src="../../../images/gin.png" alt="gin"></Img>
+                  <Label>Gin</Label>
                 </Button>
               </Wrapper>
               <Wrapper>
                 <Button type="submit" value="tequila" onClick={handleClick}>
-                  <Img src="../../../images/tequila.png" alt=""></Img>
-                  Tequila
+                  <Img src="../../../images/tequila.png" alt="tequila"></Img>
+                  <Label>Tequila</Label>
                 </Button>
               </Wrapper>
             </Row>
             <Row>
               <Wrapper>
                 <Button type="submit" value="rum" onClick={handleClick}>
-                  <Img src="../../../images/my-bar.svg" alt=""></Img>
-                  Rum
+                  <Img src="../../../images/rum.png" alt="rum"></Img>
+                  <Label>Rum</Label>
                 </Button>
               </Wrapper>
               <Wrapper>
                 <Button type="submit" value="bourbon" onClick={handleClick}>
-                  <Img src="../../../images/my-bar.svg" alt=""></Img>
-                  Bourbon
+                  <Img src="../../../images/bourbon.png" alt="bourbon"></Img>
+                  <Label>Bourbon</Label>
                 </Button>
               </Wrapper>
               <Wrapper>
                 <Button type="submit" value="scotch" onClick={handleClick}>
-                  <Img src="../../../images/my-bar.svg" alt=""></Img>
-                  Scotch
+                  <Img src="../../../images/scotch.png" alt="scotch"></Img>
+                  <Label>Scotch</Label>
                 </Button>
               </Wrapper>
             </Row>
             <Row>
               <Wrapper>
                 <Button type="submit" value="brandy" onClick={handleClick}>
-                  <Img src="../../../images/my-bar.svg" alt=""></Img>
-                  Brandy
+                  <Img src="../../../images/brandy.png" alt="brandy"></Img>
+                  <Label>Brandy</Label>
                 </Button>
               </Wrapper>
               <Wrapper>
                 <Button type="submit" value="cognac" onClick={handleClick}>
-                  <Img src="../../../images/my-bar.svg" alt=""></Img>
-                  Cognac
+                  <Img src="../../../images/cognac.png" alt="cognac"></Img>
+                  <Label>Cognac</Label>
                 </Button>
               </Wrapper>
               <Wrapper>
                 <Button type="submit" value="champagne" onClick={handleClick}>
-                  <Img src="../../../images/my-bar.svg" alt=""></Img>
-                  Champagne
+                  <Img src="../../../images/champagne.png" alt="champagne"></Img>
+                  <Label>Champagne</Label>
                 </Button>
               </Wrapper>
             </Row>
