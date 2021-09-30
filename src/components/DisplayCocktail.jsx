@@ -58,7 +58,8 @@ const DisplayCocktail = ({ cocktails, errorMessage }) => {
   const [favoriteCocktails, setFavoriteCocktails] = useState(localData);
 
 
-  const handleClick = (cocktail) => {
+  const handleAddFavorite = (cocktail) => {
+    console.log(cocktail.strDrink, '...has been added to favorites!!!')
     setFavoriteCocktails([...favoriteCocktails, cocktail]);
   }
 
@@ -76,7 +77,7 @@ const DisplayCocktail = ({ cocktails, errorMessage }) => {
             <Img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
             <ImgContent>
             <CocktailModal cocktail={cocktail} errorMessage={errorMessage} />
-            <Button type="button" onClick={() => handleClick(cocktail)}><Img src="../../../images/heart-outline.svg"></Img></Button>
+            <Button type="button" onClick={() => handleAddFavorite(cocktail)}><Img src="../../../images/heart-outline.svg"></Img></Button>
             </ImgContent>
           </ImgWrapper>
         </Li>
