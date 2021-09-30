@@ -76,6 +76,13 @@ const DisplayCocktail = ({ cocktails, errorMessage }) => {
       return false;
     }
   }
+
+  const handleDelete = (id) => {
+    console.log(id);
+    const filteredList = favoriteCocktails.filter((cocktail) => cocktail.idDrink !== id)
+    console.log(filteredList);
+    setFavoriteCocktails(filteredList);
+}
   
   return (
     <Ul>
@@ -87,7 +94,11 @@ const DisplayCocktail = ({ cocktails, errorMessage }) => {
             <ImgContent>
               <CocktailModal cocktail={cocktail} errorMessage={errorMessage} />
 
-              {ifExists(cocktail.idDrink) ? (<Button type="button" ><Img src="../../../images/favorites.svg"></Img></Button>) : (<Button type="button" onClick={() => handleAddFavorite(cocktail)}><Img src="../../../images/heart-outline.svg"></Img></Button>)}
+              {ifExists(cocktail.idDrink) ? (
+                <Button type="button" onClick={() => handleDelete(cocktail.idDrink)} ><Img src="../../../images/favorites.svg"></Img></Button>
+              ) : (
+                <Button type="button" onClick={() => handleAddFavorite(cocktail)}><Img src="../../../images/heart-outline.svg"></Img></Button>
+              )}
             </ImgContent>
           </ImgWrapper>
         </Li>
