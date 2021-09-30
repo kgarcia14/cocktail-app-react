@@ -1,8 +1,20 @@
+import { useState } from "react";
+
 const Favorites = () => {
+    const [favoriteCocktails, setFavoriteCocktails] = useState([() => {
+        const localData = localStorage.getItem('favorites');
+        const initialState = JSON.parse(localData);
+        return initialState;
+      }]);
+      
     return ( 
-        <h1>
-            favorites
-        </h1>
+        <ul>
+            {favoriteCocktails.map((favCocktail, index) => (
+                <li key={index}>
+                    {favCocktail.strDrink}
+                </li>
+            ))}
+        </ul>
      );
 }
  
