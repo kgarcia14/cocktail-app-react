@@ -42,7 +42,8 @@ const ImgContent = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  margin: 5px 0 30px 0;
 `;
 
 const H3 = styled.h3`
@@ -55,6 +56,9 @@ const H3 = styled.h3`
 const Button = styled.button`
   border: none;
   background: none;
+  color: #f35c5c;
+  font-size: 1rem;
+  margin-right: 10px;
 `;
 
 
@@ -90,6 +94,7 @@ const Favorites = ({errorMessage}) => {
                             <ImgContent>
                             <CocktailModal cocktail={cocktail} errorMessage={errorMessage} />
                             <Button type="button" onClick={() => handleDelete(cocktail.idDrink)}>Remove</Button>
+                            {/* <i class="fas fa-trash"></i> */}
                             </ImgContent>
                         </ImgWrapper>
                     </Li>

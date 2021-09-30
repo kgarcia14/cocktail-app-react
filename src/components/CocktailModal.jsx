@@ -6,7 +6,6 @@ import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
 const H4 = styled.h4`
@@ -57,7 +56,16 @@ const Label = styled.label`
 
 const Span = styled.span`
   color: #31d0aa;
-  margin-right: 8px;
+  margin-left: 8px;
+`;
+
+const ModalBtn = styled.button`
+  border: none;
+  background: none;
+  font-size: 1.2rem;
+  color: #31d0aa;
+  margin-left: 10px;
+
 `;
 
 const style = {
@@ -102,7 +110,7 @@ const CocktailModal = ({ cocktail, errorMessage }) => {
         <H4>{errorMessage}</H4>
       ) : (
         <div>
-          <Button onClick={() => handleOpen(cocktail)}><Span>View Details</Span></Button>
+          <ModalBtn onClick={() => handleOpen(cocktail)}>View Details</ModalBtn>
           <Modal
             aria-labelledby="transition-modal-title"
             aria-describedby="transition-modal-description"
