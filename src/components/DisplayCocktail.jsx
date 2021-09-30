@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import CocktailModal from "./CocktailModal";
+import { useState, useEffect } from "react";
 
 const Ul = styled.ul`
   margin: 80px 0 70px 0;
@@ -50,7 +51,22 @@ const Button = styled.button`
   background: none;
 `;
 
+
 const DisplayCocktail = ({ cocktails, errorMessage }) => {
+  const localData = JSON.parse(localStorage.getItem('favorites') || '[]');
+
+  const [favoriteCocktails, setFavoriteCocktails] = useState(localData);
+
+
+  const handleAddFavorite = (cocktail) => {
+    console.log(cocktail.strDrink, '...has been added to favorites!!!')
+    setFavoriteCocktails([...favoriteCocktails, cocktail]);
+  }
+
+  useEffect(() => {
+    localStorage.setItem('favorites', JSON.stringify(favoriteCocktails))
+    
+  }, [favoriteCocktails])
   
   return (
     <Ul>
@@ -61,7 +77,7 @@ const DisplayCocktail = ({ cocktails, errorMessage }) => {
             <Img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
             <ImgContent>
             <CocktailModal cocktail={cocktail} errorMessage={errorMessage} />
-            <Button type="button"><Img src="../../../images/heart-outline.svg"></Img></Button>
+            <Button type="button" onClick={() => handleAddFavorite(cocktail)}><Img src="../../../images/heart-outline.svg"></Img></Button>
             </ImgContent>
           </ImgWrapper>
         </Li>
