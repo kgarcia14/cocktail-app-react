@@ -33,13 +33,14 @@ const Label = styled.label`
 
 const Input = styled.input`
   width: 100%;
-  height: 30px;
-  font-size: 1rem;
+  height: 35px;
+  font-size: 1.2rem;
   padding: 0;
   border: 1px solid #dddddd;
   border-radius: 5px;
   outline-color:#31d0aa;
   box-shadow: 0 8px 20px -9px #3f3d56;
+  text-align: center;
 `;
 
 const H2 = styled.h2`
