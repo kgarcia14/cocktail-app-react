@@ -56,7 +56,7 @@ const Label = styled.label`
 
 const Span = styled.span`
   color: #31d0aa;
-  margin-left: 8px;
+  margin-right: 8px;
 `;
 
 const ModalBtn = styled.button`
