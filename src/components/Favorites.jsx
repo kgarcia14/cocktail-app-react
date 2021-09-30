@@ -20,6 +20,7 @@ const Ul = styled.ul`
 const Li = styled.li`
     list-style-type: none;
     display: flex;
+    justify-content: center;
     margin: 10px;
 `;
 
