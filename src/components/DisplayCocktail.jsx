@@ -67,6 +67,15 @@ const DisplayCocktail = ({ cocktails, errorMessage }) => {
     localStorage.setItem('favorites', JSON.stringify(favoriteCocktails))
     
   }, [favoriteCocktails])
+
+
+  const ifExists = (id) => {
+    if (favoriteCocktails.filter(favcocktail => favcocktail.idDrink === id).length > 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
   
   return (
     <Ul>
@@ -76,8 +85,9 @@ const DisplayCocktail = ({ cocktails, errorMessage }) => {
             <H3>{cocktail.strDrink}</H3>
             <Img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
             <ImgContent>
-            <CocktailModal cocktail={cocktail} errorMessage={errorMessage} />
-            <Button type="button" onClick={() => handleAddFavorite(cocktail)}><Img src="../../../images/heart-outline.svg"></Img></Button>
+              <CocktailModal cocktail={cocktail} errorMessage={errorMessage} />
+
+              {ifExists(cocktail.idDrink) ? (<Button type="button" ><Img src="../../../images/favorites.svg"></Img></Button>) : (<Button type="button" onClick={() => handleAddFavorite(cocktail)}><Img src="../../../images/heart-outline.svg"></Img></Button>)}
             </ImgContent>
           </ImgWrapper>
         </Li>
