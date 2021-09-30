@@ -15,6 +15,7 @@ const Ul = styled.ul`
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 30px 0 90px 0;
 `;
 
 const Li = styled.li`
