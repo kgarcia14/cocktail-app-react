@@ -36,7 +36,7 @@ const ImgContent = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 `;
 
 const H3 = styled.h3`
@@ -49,6 +49,7 @@ const H3 = styled.h3`
 const Button = styled.button`
   border: none;
   background: none;
+  margin-right: 10px;
 `;
 
 
