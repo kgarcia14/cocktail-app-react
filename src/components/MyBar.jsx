@@ -7,7 +7,15 @@ const Container = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 20px;
+
+  @media (min-width: 360px) {
+    margin-top: 25px
+  }
+
+  @media (min-width: 414px) {
+    margin-top: 40px;
+  }
 `;
 
 const Row = styled.div`
@@ -24,6 +32,16 @@ const Wrapper = styled.div`
   border-radius: 5px;
   width: 100px;
   height: 120px;
+
+  @media (min-width: 360px) {
+    width: 115px;
+    height: 125px;
+  }
+
+  @media (min-width: 414px) {
+    width: 120px;
+    height: 130px;
+  }
 `;
 
 const Button = styled.button`
@@ -35,12 +53,28 @@ const Button = styled.button`
   border: none;
   background: none;
   font-size: 1rem;
+
+  @media (min-width: 360px) {
+    font-size: 1.1rem;
+  }
+
+  @media (min-width: 414px) {
+    font-size: 1.2rem;
+  }
 `;
 
 const Img = styled.img`
   width: 50px;
   pointer-events: none;
   margin-bottom: 10px;
+
+  @media (min-width: 360px) {
+    width: 51px;
+  }
+
+  @media (min-width: 414px) {
+    width: 52px;
+  }
 `;
 
 const Label = styled.label`
@@ -48,9 +82,32 @@ const Label = styled.label`
 `;
 
 const H2 = styled.h2`
-  font-size: 1.7rem;
-  margin-top: 20px;
-  padding: 0 40px;
+  font-size: 1.6rem;
+  margin: 10px 30px 10px 30px;
+  font-weight: 500;
+
+  @media (min-width: 360px) {
+    font-size: 1.7rem;
+    margin: 40px 50px 0 50px;
+  }
+
+  @media (min-width: 414px) {
+    font-size: 2rem;
+    margin: 40px 50px 0 50px;
+  }
+`;
+
+const Cocktails = styled.div`
+  margin-top: -50px;
+  
+  @media (min-width: 360px) {
+  }
+
+  @media (min-width: 375px) {
+  }
+
+  @media (min-width: 414px) {
+  }
 `;
 
 const MyBar = () => {
@@ -143,7 +200,9 @@ const MyBar = () => {
           <H2 id="heading">Select For A List Of Cocktails.</H2>
         </>
       ) : (
-        <DisplayCocktail cocktails={cocktailsByAlcohol} />
+        <Cocktails>
+          <DisplayCocktail cocktails={cocktailsByAlcohol} />
+        </Cocktails>
       )}
     </>
   );

@@ -12,6 +12,10 @@ const Nav = styled.div`
   justify-content: space-around;
   align-items: center;
   z-index: 1;
+
+  @media (min-width: 414px) {
+    height: 70px;
+  }
 `;
 
 const NavItem = styled.div`
@@ -30,11 +34,20 @@ const NavItem = styled.div`
 const Label = styled.label`
   color: #31d0aa;
   font-size: 1rem;
+
+  @media (min-width: 414px) {
+    font-size: 1.1rem;
+  }
 `;
 
 const Img = styled.img`
   height: 25px;
   width: 25px;
+
+  @media (min-width: 414px) {
+    height: 30px;
+    width: 30px;
+  }
 `;
 
 const Navbar = () => {

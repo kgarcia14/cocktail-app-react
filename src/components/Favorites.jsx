@@ -5,10 +5,28 @@ import CocktailModal from './CocktailModal';
 const H2 = styled.h2`
   font-size: 2.2rem;
   font-weight: 500;
-  padding: 0 50px;
-  margin: 150px 0 0 0;
+  margin: 150px 10px 0 10px;
   color: #393939;
   text-align: center;
+
+  @media (min-width: 360px) {
+    font-size: 2.3rem;
+    margin: 150px 15px 0 15px;
+    color: #393939;
+    text-align: center;
+    }
+
+  @media (min-width: 375px) {
+    font-size: 2.3rem;
+    margin: 150px 25px 25px;
+    color: #393939;
+    text-align: center;
+    }
+
+  @media (min-width: 414px) {
+    font-size: 2.5rem;
+    margin: 150px 30px 30px;
+    }
 `;
 
 const Ul = styled.ul`
@@ -83,7 +101,7 @@ const Favorites = ({errorMessage}) => {
     return ( 
         <>
             {favoriteCocktails.length < 1 ? (
-                <H2>Go and add some cocktails to your favorites</H2>
+                <H2>Add Some Cocktails To Your Favorites!</H2>
             ) : (
             <Ul>
                 {favoriteCocktails.map((cocktail) => (
