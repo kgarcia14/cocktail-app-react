@@ -4,10 +4,10 @@ import axios from "axios";
 import DisplayCocktail from "./DisplayCocktail";
 
 const Container = styled.div`
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 `;
 
 const Form = styled.form`
@@ -21,6 +21,9 @@ const Form = styled.form`
   background-color: #fff;
   z-index: 1;
   
+  @media (min-width: 414px) {
+    height: 70px;
+  }
 `;
 
 const Label = styled.label`
@@ -41,15 +44,37 @@ const Input = styled.input`
   outline-color:#31d0aa;
   box-shadow: 0 8px 20px -9px #3f3d56;
   text-align: center;
+
+  @media (min-width: 375px) {
+    height: 40px;
+  }
+
+  @media (min-width: 414px) {
+    height: 45px;
+  }
 `;
 
 const H2 = styled.h2`
   font-size: 2.2rem;
   font-weight: 500;
-  padding: 0 50px;
-  margin: 150px 0 0 0;
   color: #393939;
   text-align: center;
+  margin: 150px 40px 0 40px;
+  
+  @media (min-width: 360px) {
+    font-size: 2.5rem;
+    margin: 150px 45px 0 45px;
+  }
+
+  @media (min-width: 375px) {
+    font-size: 2.8rem;
+    margin: 200px 45px 0 45px;
+  }
+
+  @media (min-width: 414px) {
+    font-size: 3.2rem;
+    margin: 200px 45px 0 45px;
+  }
 `;
 
 const H4 = styled.h4`
@@ -109,7 +134,7 @@ const Search = () => {
         </Label>
       </Form>
 
-      <H2 id="heading">Search for your favorite cocktail!</H2>
+      <H2 id="heading" className="heading">Search For Your Favorite Cocktail!</H2>
       
         {cocktails === null ? (
           <H4>{errorMessage}</H4>
