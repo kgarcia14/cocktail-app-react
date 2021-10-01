@@ -31,7 +31,7 @@ const H2 = styled.h2`
 
 const Ul = styled.ul`
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     margin: 30px 0 90px 0;
 `;
