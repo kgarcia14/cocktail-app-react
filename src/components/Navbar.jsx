@@ -1,5 +1,7 @@
 import styled from "styled-components";
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const Nav = styled.div`
   overflow: hidden;
@@ -9,7 +11,7 @@ const Nav = styled.div`
   background-color: #eee;
   display: flex;
   height: 65px;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   z-index: 1;
 
@@ -20,6 +22,7 @@ const Nav = styled.div`
 
 const NavItem = styled.div`
   height: 100%;
+  width: 25%;
 
   .nav-link {
     height: 100%;
@@ -28,6 +31,10 @@ const NavItem = styled.div`
     align-items: center;
     justify-content: space-evenly;
     text-decoration: none;
+  }
+
+  .active {
+    background-color: #f7f7f7;
   }
 `;
 
@@ -51,32 +58,43 @@ const Img = styled.img`
 `;
 
 const Navbar = () => {
+  const [url, setUrl] = useState('');
+
+  const location = useLocation();
+
+  const handleClick = () => {
+    console.log(url)
+  }
+
+  useEffect(() => {
+    setUrl(location.pathname)
+  }, [location.pathname])
 
   return (
     <Nav>
       <NavItem>
-        <Link className="nav-link" to="/">
+        <NavLink exact activeClassName="active" className="nav-link" to="/">
           <Img src="../../../images/explore.svg"></Img>
           <Label>Home</Label>
-        </Link>
+        </NavLink>
       </NavItem>
       <NavItem>
-        <Link className="nav-link" to="/search">
+        <NavLink activeClassName="active" className="nav-link" to="/search" onClick={handleClick}>
           <Img src="../../../images/search.svg"></Img>
           <Label>Search</Label>
-        </Link>
+        </NavLink>
       </NavItem>
       <NavItem>
-        <Link className="nav-link" to="/mybar">
-          <Img src="../../../images/my-bar.svg"></Img>
+        <NavLink activeClassName="active" className="nav-link" to="/mybar">
+            <Img src="../../../images/my-bar.svg"></Img>
           <Label>My Bar</Label>
-        </Link>
+        </NavLink>
       </NavItem>
       <NavItem>
-        <Link className="nav-link" to="/favorites">
+        <NavLink activeClassName="active" className="nav-link" to="/favorites">
           <Img src="../../../images/favorites.svg"></Img>
           <Label>Favorites</Label>
-        </Link>
+        </NavLink>
       </NavItem>
     </Nav>
   );

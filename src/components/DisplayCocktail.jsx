@@ -65,7 +65,7 @@ const DisplayCocktail = ({ cocktails, errorMessage }) => {
 
   useEffect(() => {
     localStorage.setItem('favorites', JSON.stringify(favoriteCocktails))
-    
+  
   }, [favoriteCocktails])
 
 
