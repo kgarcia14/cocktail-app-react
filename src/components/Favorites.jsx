@@ -24,7 +24,7 @@ const H2 = styled.h2`
     }
 
   @media (min-width: 414px) {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     margin: 150px 30px 30px;
     }
 `;
