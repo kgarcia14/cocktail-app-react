@@ -3,8 +3,7 @@ import CocktailModal from "./CocktailModal";
 import { useState, useEffect } from "react";
 
 const Ul = styled.ul`
-  margin: 100px 0 70px 0;
-  padding: 0;
+  margin: 100px 0 50px 0;
   list-style-type: none;
   display: flex;
   flex-direction: column;
