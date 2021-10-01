@@ -3,6 +3,26 @@ import { useState } from "react";
 import axios from "axios";
 import DisplayCocktail from "./DisplayCocktail";
 
+const ReloadDiv = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  `;
+
+const Reload = styled.button`
+  border: none;
+  background: none;
+  background-color: #fff;;
+  color: #31d0aa;
+  font-size: 1rem;
+  margin-right: 15px;
+`;
+
 const Container = styled.form`
   display: flex;
   flex-direction: column;
@@ -19,29 +39,10 @@ const Container = styled.form`
 `;
 
 const Mybarlist = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-`;
-
-const ReloadDiv = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  width: 100%;
-  background-color: #fff;
-  position: fixed;
-  top: 0;
-`;
-
-const Reload = styled.button`
-  border: none;
-  background: none;
-  background-color: #fff;;
-  color: #31d0aa;
-  font-size: 1rem;
-`;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  `;
 
 const Row = styled.div`
   display: flex;
