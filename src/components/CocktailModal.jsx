@@ -16,10 +16,31 @@ const H4 = styled.h4`
 `;
 
 const H3 = styled.h4`
+  width: 100%;
   font-size: 1.5rem;
   font-weight: 500;
   color: #393939;
   margin: 0 0 20px 0;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    font-size: 1.7rem;
+  }
+`;
+
+const CloseDiv = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+`;
+
+const CloseBtn = styled.button`
+  background: none;
+  border: none;
+`;
+
+const Img = styled.img`
+  width: 25px;
 `;
 
 const Container = styled.div`
@@ -27,6 +48,13 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: 768px) {
+    margin: 0 15px 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -41,6 +69,10 @@ const P = styled.p`
   margin: 0;
   padding: 0;
   color: #393939;
+
+  @media (min-width: 768px) {
+    font-size: 1.3rem;
+  }
 `;
 
 const InstructionWrapper = styled.div`
@@ -52,11 +84,19 @@ const Label = styled.label`
   font-size: 1.1rem;
   font-weight: 600;
   color: #393939;
+
+  @media (min-width: 768px) {
+    font-size: 1.2rem;
+  }
 `;
 
 const Span = styled.span`
   color: #31d0aa;
   margin-right: 8px;
+
+  @media (min-width: 768px) {
+    font-size: 1.3rem;
+  }
 `;
 
 const ModalBtn = styled.button`
@@ -66,6 +106,10 @@ const ModalBtn = styled.button`
   color: #31d0aa;
   margin-left: 10px;
 
+  @media (min-width: 768px) {
+    font-size: 1.7rem;
+    margin-left: 25px;
+  }
 `;
 
 const style = {
@@ -104,6 +148,10 @@ const CocktailModal = ({ cocktail, errorMessage }) => {
   };
   const handleClose = () => setOpen(false);
 
+  const handleBtnClick = () => {
+    handleClose();
+  }
+
   return (
     <>
       {cocktailDetails === null ? (
@@ -124,6 +172,9 @@ const CocktailModal = ({ cocktail, errorMessage }) => {
           >
             <Fade in={open}>
               <Box sx={style}>
+                <CloseDiv>
+                  <CloseBtn type="button" onClick={handleBtnClick}><Img src="../../images/cancel.svg" alt="close button"></Img></CloseBtn>
+                </CloseDiv>
                 <Typography id="transition-modal-description" sx={{ mt: 2 }}>
                   <Container>
                     <H3>{cocktailDetails.strDrink}</H3>

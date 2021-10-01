@@ -27,8 +27,8 @@ const Reload = styled.button`
   margin-right: 15px;
 
   @media (min-width: 768px) {
-    font-size: 1.3rem;
-    margin-right: 25px;
+    font-size: 1.4rem;
+    margin-right: 30px;
   }
 `;
 
@@ -131,6 +131,7 @@ const Label = styled.label`
 `;
 
 const H2 = styled.h2`
+  color: #393939;    
   font-size: 1.6rem;
   margin: 10px 30px 10px 30px;
   font-weight: 500;
@@ -141,12 +142,11 @@ const H2 = styled.h2`
   }
 
   @media (min-width: 414px) {
-    font-size: 2rem;
+    font-size: 2.7rem;
     margin: 40px 50px 0 50px;
   }
 
   @media (min-width: 768px) {
-    font-size: 2.5rem;
     margin: 40px 50px 0 50px;
   }
 `;

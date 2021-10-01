@@ -23,8 +23,6 @@ const H1 = styled.h1 `
         font-size: 2.7rem;
         margin: 0 40px;
     }
-
-}
 `;
 
 const ImgWrapper = styled.div `

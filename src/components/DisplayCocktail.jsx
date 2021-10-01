@@ -43,12 +43,21 @@ const H3 = styled.h3`
   padding: 0;
   color: #393939;
   letter-spacing: 1.8px;
+
+  @media (min-width: 768px) {
+    font-size: 2rem;
+  }
 `;
 
 const Button = styled.button`
   border: none;
   background: none;
   margin-right: 10px;
+
+  @media (min-width: 768px) {
+    width: 35px;
+    margin-right: 25px;
+  }
 `;
 
 
