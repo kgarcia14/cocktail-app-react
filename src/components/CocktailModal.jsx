@@ -40,7 +40,11 @@ const CloseBtn = styled.button`
 `;
 
 const Img = styled.img`
-  width: 25px;
+  width: 15px;
+
+  @media (min-width: 768px) {
+    width: 25px;
+  }
 `;
 
 const Container = styled.div`
