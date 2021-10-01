@@ -84,7 +84,7 @@ const Button = styled.button`
 const Favorites = ({errorMessage}) => {
     const localData = JSON.parse(localStorage.getItem('favorites') || '[]');
     console.log(localData);
-    const [favoriteCocktails, setFavoriteCocktails] = useState(localData);
+    const [favoriteCocktails, setFavoriteCocktails] = useState(localData.reverse());
 
     useEffect(() => {
         localStorage.setItem('favorites', JSON.stringify(favoriteCocktails))
