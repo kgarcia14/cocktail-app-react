@@ -20,7 +20,19 @@ const Container = styled.form`
 
 const Mybarlist = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
+`;
+
+const ReloadDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
 `;
 
 const Reload = styled.button`
@@ -29,11 +41,6 @@ const Reload = styled.button`
   background-color: #fff;;
   color: #31d0aa;
   font-size: 1rem;
-  height: 50px;
-  width: 100%;
-  position: fixed;
-  text-align: center;
-  top: 0;
 `;
 
 const Row = styled.div`
@@ -116,7 +123,7 @@ const H2 = styled.h2`
 `;
 
 const Cocktails = styled.div`
-  margin-top: -50px;
+  margin-top: -30px;
   
   @media (min-width: 360px) {
   }
@@ -223,7 +230,9 @@ const MyBar = () => {
         </>
       ) : (
         <Mybarlist>
-          <Reload type="button" onClick={reload}>Go Back</Reload>
+          <ReloadDiv>
+            <Reload type="button" onClick={reload}>Go Back</Reload>
+          </ReloadDiv>
           <Cocktails>
             <DisplayCocktail cocktails={cocktailsByAlcohol} />
           </Cocktails>
