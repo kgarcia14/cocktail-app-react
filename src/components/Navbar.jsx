@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Link } from 'react-router-dom';
-import { useState } from "react";
 
 const Nav = styled.div`
   overflow: hidden;
