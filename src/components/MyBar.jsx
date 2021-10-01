@@ -18,6 +18,24 @@ const Container = styled.form`
   }
 `;
 
+const Mybarlist = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const Reload = styled.button`
+  border: none;
+  background: none;
+  background-color: #fff;;
+  color: #31d0aa;
+  font-size: 1rem;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  text-align: center;
+  top: 0;
+`;
+
 const Row = styled.div`
   display: flex;
   justify-content: space-evenly;
@@ -131,6 +149,10 @@ const MyBar = () => {
       });
   };
 
+  const reload = () => {
+    setCocktailsByAlcohol([]);
+  }
+
   return (
     <>
       {cocktailsByAlcohol.length < 1 ? (
@@ -200,9 +222,12 @@ const MyBar = () => {
           <H2 id="heading">Select For A List Of Cocktails.</H2>
         </>
       ) : (
-        <Cocktails>
-          <DisplayCocktail cocktails={cocktailsByAlcohol} />
-        </Cocktails>
+        <Mybarlist>
+          <Reload type="button" onClick={reload}>Go Back</Reload>
+          <Cocktails>
+            <DisplayCocktail cocktails={cocktailsByAlcohol} />
+          </Cocktails>
+        </Mybarlist>
       )}
     </>
   );
