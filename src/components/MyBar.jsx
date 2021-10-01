@@ -12,7 +12,11 @@ const ReloadDiv = styled.div`
   background-color: #fff;
   position: fixed;
   top: 0;
-  `;
+
+  @media (min-width: 768px) {
+    height: 70px;
+  }  
+`;
 
 const Reload = styled.button`
   border: none;
@@ -21,6 +25,11 @@ const Reload = styled.button`
   color: #31d0aa;
   font-size: 1rem;
   margin-right: 15px;
+
+  @media (min-width: 768px) {
+    font-size: 1.3rem;
+    margin-right: 25px;
+  }
 `;
 
 const Container = styled.form`
@@ -36,6 +45,10 @@ const Container = styled.form`
   @media (min-width: 414px) {
     margin-top: 40px;
   }
+
+  @media (min-width: 768px) {
+    margin-top: 40px;
+  }
 `;
 
 const Mybarlist = styled.div`
@@ -48,6 +61,15 @@ const Row = styled.div`
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 10px;
+
+  @media (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 40px;
+
+    .center-wrapper {
+      margin: 0 50px;
+    }
+  }
 `;
 
 const Wrapper = styled.div`
@@ -67,6 +89,7 @@ const Wrapper = styled.div`
   @media (min-width: 414px) {
     width: 120px;
     height: 130px;
+
   }
 `;
 
@@ -121,19 +144,15 @@ const H2 = styled.h2`
     font-size: 2rem;
     margin: 40px 50px 0 50px;
   }
+
+  @media (min-width: 768px) {
+    font-size: 2.5rem;
+    margin: 40px 50px 0 50px;
+  }
 `;
 
 const Cocktails = styled.div`
   margin-top: -30px;
-  
-  @media (min-width: 360px) {
-  }
-
-  @media (min-width: 375px) {
-  }
-
-  @media (min-width: 414px) {
-  }
 `;
 
 const MyBar = () => {
@@ -173,7 +192,7 @@ const MyBar = () => {
                   <Label>Vodka</Label>
                 </Button>
               </Wrapper>
-              <Wrapper>
+              <Wrapper className="center-wrapper">
                 <Button type="submit" value="gin" onClick={handleClick}>
                   <Img src="../../../images/gin.png" alt="gin"></Img>
                   <Label>Gin</Label>
@@ -193,7 +212,7 @@ const MyBar = () => {
                   <Label>Rum</Label>
                 </Button>
               </Wrapper>
-              <Wrapper>
+              <Wrapper className="center-wrapper">
                 <Button type="submit" value="bourbon" onClick={handleClick}>
                   <Img src="../../../images/bourbon.png" alt="bourbon"></Img>
                   <Label>Bourbon</Label>
@@ -213,7 +232,7 @@ const MyBar = () => {
                   <Label>Brandy</Label>
                 </Button>
               </Wrapper>
-              <Wrapper>
+              <Wrapper className="center-wrapper">
                 <Button type="submit" value="cognac" onClick={handleClick}>
                   <Img src="../../../images/cognac.png" alt="cognac"></Img>
                   <Label>Cognac</Label>

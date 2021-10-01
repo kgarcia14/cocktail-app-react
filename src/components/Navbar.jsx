@@ -36,7 +36,7 @@ const NavItem = styled.div`
   .active {
     background-color: #f7f7f7;
   }
-`;
+`
 
 const Label = styled.label`
   color: #31d0aa;
