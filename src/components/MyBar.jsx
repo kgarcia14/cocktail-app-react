@@ -13,7 +13,7 @@ const ReloadDiv = styled.div`
   position: fixed;
   top: 0;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     height: 70px;
   }  
 `;
@@ -26,7 +26,7 @@ const Reload = styled.button`
   font-size: 1rem;
   margin-right: 15px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     font-size: 1.4rem;
     margin-right: 30px;
   }
@@ -34,7 +34,7 @@ const Reload = styled.button`
 
 const Container = styled.div`
 
-@media (min-height: 320px) and (orientation: landscape) {
+@media screen and (min-height: 320px) and (orientation: landscape) {
     display: flex;
   }
 `;
@@ -45,19 +45,19 @@ const Content = styled.form`
   justify-content: center;
   margin-top: 20px;
 
-  @media (min-width: 360px) {
+  @media screen and (min-width: 360px) {
     margin-top: 25px
   }
 
-  @media (min-width: 414px) {
+  @media screen and (min-width: 414px) {
     margin-top: 40px;
   }
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     margin-top: 40px;
   }
 
-  @media (min-height: 320px) and (orientation: landscape) {
+  @media screen and (min-height: 320px) and (orientation: landscape) {
       width: 60%;
       height: 260px;
       margin: 0;
@@ -75,7 +75,7 @@ const Row = styled.div`
   justify-content: space-evenly;
   margin-bottom: 10px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     justify-content: center;
     margin-bottom: 40px;
 
@@ -84,7 +84,7 @@ const Row = styled.div`
     }
   }
 
-  @media (min-height: 320px) and (orientation: landscape) {
+  @media screen and (min-height: 320px) and (orientation: landscape) {
     justify-content: center;
     margin-bottom: 5px;
 
@@ -103,17 +103,17 @@ const Wrapper = styled.div`
   width: 100px;
   height: 120px;
 
-  @media (min-width: 360px) {
+  @media screen and (min-width: 360px) {
     width: 115px;
     height: 125px;
   }
 
-  @media (min-width: 414px) {
+  @media screen and (min-width: 414px) {
     width: 120px;
     height: 130px;
   }
 
-  @media (min-height: 320px) and (orientation: landscape) {
+  @media screen and (min-height: 320px) and (orientation: landscape) {
     width: 60px;
     height: 75px;
   }
@@ -129,11 +129,11 @@ const Button = styled.button`
   background: none;
   font-size: 1rem;
 
-  @media (min-width: 360px) {
+  @media screen and (min-width: 360px) {
     font-size: 1.1rem;
   }
 
-  @media (min-width: 414px) {
+  @media screen and (min-width: 414px) {
     font-size: 1.2rem;
   }
 `;
@@ -143,15 +143,15 @@ const Img = styled.img`
   pointer-events: none;
   margin-bottom: 10px;
 
-  @media (min-width: 360px) {
+  @media screen and (min-width: 360px) {
     width: 51px;
   }
 
-  @media (min-width: 414px) {
+  @media screen and (min-width: 414px) {
     width: 52px;
   }
 
-  @media (min-height: 320px) and (orientation: landscape) {
+  @media screen and (min-height: 320px) and (orientation: landscape) {
     width: 27px;
     margin-bottom: 5px
   }
@@ -160,14 +160,14 @@ const Img = styled.img`
 const Label = styled.label`
   margin: 0 0 5px 0;
 
-  @media (min-height: 320px) and (orientation: landscape) {
+  @media screen and (min-height: 320px) and (orientation: landscape) {
     font-size: .60rem;
   }
 `;
 
 const Heading = styled.div`
 
-@media (min-height: 320px) and (orientation: landscape) {
+@media screen and (min-height: 320px) and (orientation: landscape) {
     display: flex;
     align-items: center;
     width: 50%;
@@ -181,21 +181,21 @@ const H2 = styled.h2`
   margin: 10px 30px 10px 30px;
   font-weight: 500;
 
-  @media (min-width: 360px) {
+  @media screen and (min-width: 360px) {
     font-size: 1.7rem;
     margin: 40px 50px 0 50px;
   }
 
-  @media (min-width: 414px) {
+  @media screen and (min-width: 414px) {
     font-size: 2.7rem;
     margin: 40px 50px 0 50px;
   }
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     margin: 40px 50px 0 50px;
   }
 
-  @media (min-height: 320px) and (orientation: landscape) {
+  @media screen and (min-height: 320px) and (orientation: landscape) {
     margin: 0 8px;
     font-size: 1.8rem;
   }

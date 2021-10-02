@@ -23,7 +23,7 @@ const H3 = styled.h4`
   margin: 0 0 20px 0;
   text-align: center;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     font-size: 1.7rem;
   }
 `;
@@ -42,7 +42,7 @@ const CloseBtn = styled.button`
 const Img = styled.img`
   width: 15px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     width: 25px;
   }
 `;
@@ -53,7 +53,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     margin: 0 15px 0 15px;
     display: flex;
     flex-direction: column;
@@ -74,7 +74,7 @@ const P = styled.p`
   padding: 0;
   color: #393939;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     font-size: 1.3rem;
   }
 `;
@@ -89,7 +89,7 @@ const Label = styled.label`
   font-weight: 600;
   color: #393939;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     font-size: 1.2rem;
   }
 `;
@@ -98,7 +98,7 @@ const Span = styled.span`
   color: #31d0aa;
   margin-right: 8px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     font-size: 1.3rem;
   }
 `;
@@ -110,7 +110,7 @@ const ModalBtn = styled.button`
   color: #31d0aa;
   margin-left: 10px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     font-size: 1.7rem;
     margin-left: 25px;
   }
