@@ -8,7 +8,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media (max-height: 320px) and (orientation: landscape) {
+  @media screen and (max-height: 320px) and (orientation: landscape) {
     height: 255px;
     }
 `;
@@ -24,7 +24,7 @@ const Form = styled.form`
   background-color: #fff;
   z-index: 1;
   
-  @media (min-width: 414px) {
+  @media screen and (min-width: 414px) {
     height: 70px;
   }
 `;
@@ -48,11 +48,11 @@ const Input = styled.input`
   box-shadow: 0 8px 20px -9px #3f3d56;
   text-align: center;
 
-  @media (min-width: 375px) {
+  @media screen and (min-width: 375px) {
     height: 40px;
   }
 
-  @media (min-width: 414px) {
+  @media screen and (min-width: 414px) {
     height: 45px;
   }
 `;
@@ -63,7 +63,7 @@ const SearchHeading = styled.div`
     align-items: center;
     position: absolute;
 
-  @media (min-height: 320px) and (orientation: landscape) {
+  @media screen and (min-height: 320px) and (orientation: landscape) {
     height: 100%;
     }
 `;
@@ -75,42 +75,42 @@ const H2 = styled.h2`
   text-align: center;
   margin: 0 40px;
   
-  @media (min-width: 360px) {
+  @media screen and (min-width: 360px) {
     font-size: 2.5rem;
     margin: 0 45px;
   }
 
-  @media (min-width: 375px) {
+  @media screen and (min-width: 375px) {
     font-size: 2.7rem;
   }
 
-  @media (min-width: 414px) {
+  @media screen and (min-width: 414px) {
     font-size: 2.7rem;
     padding: 0 30px;
   }
 
-  @media (min-height: 320px) and (orientation: landscape) {
+  @media screen and (min-height: 320px) and (orientation: landscape) {
       margin: 0;
       font-size: 2.4rem;
     }
 
-  @media (min-height: 360px) and (orientation: landscape) {
+  @media screen and (min-height: 360px) and (orientation: landscape) {
       padding: 0 30px;
     }
 
-  @media (min-height: 375px) and (orientation: landscape) {
+  @media screen and (min-height: 375px) and (orientation: landscape) {
       padding: 0 50px;
     }
 
-  @media (min-width:812px) and (min-height: 375px) and (orientation: landscape) {
+  @media screen and (min-width:812px) and (min-height: 375px) and (orientation: landscape) {
       padding: 0 120px;
     }
 
-  @media (min-height: 414px) and (orientation: landscape) {
+  @media screen and (min-height: 414px) and (orientation: landscape) {
       padding: 0 80px;
     }
   
-  @media (min-height: 731px) and (orientation: landscape) {
+  @media screen and (min-height: 731px) and (orientation: landscape) {
         padding: 0 20px;
     }
 `;

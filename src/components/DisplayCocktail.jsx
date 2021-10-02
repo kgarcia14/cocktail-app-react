@@ -9,7 +9,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media (max-height: 320px) {
+  @media screen and (max-height: 320px) {
 
     }
 `;
@@ -17,7 +17,7 @@ const Container = styled.div`
 const Ul = styled.ul`
   margin: 100px 0 40px 0;
 
-  @media (max-height: 320px) {
+  @media screen and (max-height: 320px) {
 
   }
 `;
@@ -35,7 +35,7 @@ const ImgWrapper = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media (max-height: 320px) {
+  @media screen and (max-height: 320px) {
       width: 75%;
   }
 `;
@@ -59,7 +59,7 @@ const H3 = styled.h3`
   color: #393939;
   letter-spacing: 1.8px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     font-size: 2rem;
   }
 `;
@@ -69,7 +69,7 @@ const Button = styled.button`
   background: none;
   margin-right: 10px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     width: 35px;
     margin-right: 25px;
   }

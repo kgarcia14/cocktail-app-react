@@ -21,30 +21,30 @@ const H2 = styled.h2`
   text-align: center;
   position: absolute;
 
-  @media (min-width: 360px) {
+  @media screen and (min-width: 360px) {
     font-size: 2.3rem;
     margin: 150px 15px 0 15px;
     color: #393939;
     text-align: center;
     }
 
-  @media (min-width: 375px) {
+  @media screen and (min-width: 375px) {
     font-size: 2.3rem;
     margin: 150px 25px 25px;
     color: #393939;
     text-align: center;
     }
 
-  @media (min-width: 414px) {
+  @media screen and (min-width: 414px) {
     font-size: 2.7rem;
     margin: 150px 30px 30px;
     }
 
-    @media (max-height: 320px) {
+    @media screen and (max-height: 320px) {
       height: 50vh;
     }
 
-    @media (max-height: 731px) {
+    @media screen and (max-height: 731px) {
         height: 50vh;
     }
 `;
@@ -69,7 +69,7 @@ const ImgWrapper = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media (max-height: 320px) {
+  @media screen and (max-height: 320px) {
       width: 75%;
   }
 `;
