@@ -8,37 +8,8 @@ const Container = styled.div `
     justify-content: center;
     align-items: center;
 
-    @media (min-height: 320px) and (orientation: landscape) {
+    @media (min-height: 300px) and (orientation: landscape) {
         flex-direction: row;
-        height: 255px;
-    }
-
-    @media (min-height: 360px) and (orientation: landscape) {
-        height: 295px;
-    }
-
-    @media (min-height: 375px) and (orientation: landscape) {
-        height: 310px;
-    }
-
-    @media (min-height: 411px) and (orientation: landscape) {
-        height: 346px;
-    }
-
-    @media (min-height: 414px) and (orientation: landscape) {
-        height: 349px;
-    }
-
-    @media (min-height: 414px) and (orientation: landscape) {
-        height: 349px;
-    }
-
-    @media (min-height: 768px) and (orientation: landscape) {
-        height: 703px;
-    }
-
-    @media (min-height: 1024px) and (orientation: landscape) {
-        height: 959px;
     }
 `;
 
