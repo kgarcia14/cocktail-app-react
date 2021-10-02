@@ -16,7 +16,6 @@ const Nav = styled.div`
   z-index: 1;
 
   @media (min-width: 414px) {
-    height: 70px;
   }
 `;
 

@@ -7,21 +7,103 @@ const Container = styled.div `
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media (min-height: 320px) and (orientation: landscape) {
+        flex-direction: row;
+        height: 255px;
+    }
+
+    @media (min-height: 360px) and (orientation: landscape) {
+        height: 295px;
+    }
+
+    @media (min-height: 375px) and (orientation: landscape) {
+        height: 310px;
+    }
+
+    @media (min-height: 411px) and (orientation: landscape) {
+        height: 346px;
+    }
+
+    @media (min-height: 414px) and (orientation: landscape) {
+        height: 349px;
+    }
+
+    @media (min-height: 414px) and (orientation: landscape) {
+        height: 349px;
+    }
+
+    @media (min-height: 768px) and (orientation: landscape) {
+        height: 703px;
+    }
+
+    @media (min-height: 1024px) and (orientation: landscape) {
+        height: 959px;
+    }
 `;
 
 const H1 = styled.h1 `
     font-size: 2.2rem;
     font-weight: 500;
     color: #393939;
-    margin: 0 20px;
+    margin: 0 20px 30px 20px;
 
     @media (min-width: 360px) {
         font-size: 2.5rem;
     }
 
-    @media (min-width: 414px) {
+    @media (min-width: 411px) {
         font-size: 2.7rem;
-        margin: 0 40px;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 4rem;
+        padding: 0 80px;
+    }
+
+    @media (min-width: 1024px) {
+        font-size: 4.5rem;
+        padding: 0 185px;
+    }
+
+    @media (min-height: 320px) and (orientation: landscape) {
+        width: 60%;
+        font-size: 2.25rem;
+        margin: 0 0 0 50px;
+    }
+
+    @media (min-height: 360px) and (orientation: landscape) {
+        font-size: 2.25rem;
+        padding: 20px;
+        margin: 0 0 0 50px;
+    }
+
+    @media (min-height: 375px) and (orientation: landscape) {
+        padding: 30px;
+    }
+
+    @media (min-height: 411px) and (orientation: landscape) {
+        font-size: 2.8rem;
+        padding: 0 20px;
+    }
+
+    @media (min-height: 768px) and (orientation: landscape) {
+        font-size: 4rem;
+    }
+
+    @media (min-height: 1024px) and (orientation: landscape) {
+        font-size: 4.5rem;
+        padding: 100px;
+        margin: 0 0 0 60px;
+    }
+
+    @media (min-width: 812px) and (max-height: 375px) and (orientation: landscape) {
+        font-size: 2.7rem;
+        padding: 0  50px;
+    }
+
+    @media (min-width: 823px) and (max-height: 411px) and (orientation: landscape) {
+        padding: 0  50px;
     }
 `;
 
@@ -30,18 +112,69 @@ const ImgWrapper = styled.div `
     justify-content: center;
     width: 100%;
     overflow: hidden;
+
+    @media (min-height: 320px) and (orientation: landscape) {
+        width: 40%;
+    }
 `;
 
 const Img = styled.img `
-    width: 450px;
+    width: 100px;
+    margin-bottom: 20px;
 
     @media (min-width: 360px) {
-        width: 475px;
+        width: 120px;
     }
 
-    @media (min-width: 414px) {
-        width: 500px;
+    @media (min-width: 360px) {
+        width: 125px;
     }
+
+    @media (min-width: 411px) {
+        width: 145px;
+    }
+
+    @media (min-width: 768px) {
+        width: 160px;
+    }
+
+    @media (min-width: 1024px) {
+        width: 235px;
+    }
+
+    @media (min-height: 320px) and (orientation: landscape) {
+        width: 85px;
+        margin: 0 50px 20px 0;
+    }
+
+    @media (min-height: 360px) and (orientation: landscape) {
+        width: 100px;
+        margin: 0 50px 0 0;
+    }
+
+    @media (min-height: 414px) and (orientation: landscape) {
+        width: 120px;
+    }
+
+    @media (min-height: 768px) and (orientation: landscape) {
+        width: 200px;
+        margin-right: 150px;
+    }
+
+    @media (min-height: 1024px) and (orientation: landscape) {
+        width: 230px;
+        margin-right: 220px;
+    }
+
+    @media (min-width: 812px) and (max-height: 375px) and (orientation: landscape) {
+        margin-right: 150px;
+    }
+
+    @media (min-width: 823px) and (max-height: 411px) and (orientation: landscape) {
+        width: 120px;
+        margin-right: 125px;
+    }
+    
 `;
 
 const Home = () => {
@@ -49,7 +182,7 @@ const Home = () => {
         <Container className="home-container">
             <H1 className="home-h1">Discover A World Of Delicious Cocktails.</H1>
             <ImgWrapper className="home-img-wrapper">
-                <Img src="../../../images/astronaut.svg" className="home-img"></Img>
+                <Img src="../../../images/testastronaut.svg" className="home-img"></Img>
             </ImgWrapper>
         </Container>
      );

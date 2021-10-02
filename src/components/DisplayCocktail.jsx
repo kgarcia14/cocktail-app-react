@@ -2,13 +2,24 @@ import styled from "styled-components";
 import CocktailModal from "./CocktailModal";
 import { useState, useEffect } from "react";
 
-const Ul = styled.ul`
-  margin: 100px 0 50px 0;
+const Container = styled.div`
+  width: 100%;
   list-style-type: none;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+
+  @media (max-height: 320px) {
+
+    }
+`;
+
+const Ul = styled.ul`
+  margin: 100px 0 40px 0;
+
+  @media (max-height: 320px) {
+
+  }
 `;
 
 const Li = styled.li`
@@ -23,6 +34,10 @@ const ImgWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-height: 320px) {
+      width: 75%;
+  }
 `;
 
 const Img = styled.img`
@@ -94,6 +109,7 @@ const DisplayCocktail = ({ cocktails, errorMessage }) => {
 }
   
   return (
+    <Container>
     <Ul>
       {cocktails.map((cocktail) => (
         <Li key={cocktail.idDrink} id={cocktail.idDrink}>
@@ -113,6 +129,7 @@ const DisplayCocktail = ({ cocktails, errorMessage }) => {
         </Li>
       ))}
     </Ul>
+    </Container>
   );
 };
 
