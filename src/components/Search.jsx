@@ -7,6 +7,10 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-height: 320px) and (orientation: landscape) {
+    height: 255px;
+    }
 `;
 
 const Form = styled.form`
@@ -59,7 +63,7 @@ const SearchHeading = styled.div`
     align-items: center;
     position: absolute;
 
-  @media (max-height: 320px) {
+  @media (min-height: 320px) and (orientation: landscape) {
     height: 100%;
     }
 `;
@@ -82,14 +86,31 @@ const H2 = styled.h2`
 
   @media (min-width: 414px) {
     font-size: 2.7rem;
+    padding: 0 30px;
   }
 
-  @media (max-height: 320px) {
+  @media (min-height: 320px) and (orientation: landscape) {
       margin: 0;
       font-size: 2.4rem;
     }
+
+  @media (min-height: 360px) and (orientation: landscape) {
+      padding: 0 30px;
+    }
+
+  @media (min-height: 375px) and (orientation: landscape) {
+      padding: 0 50px;
+    }
+
+  @media (min-width:812px) and (min-height: 375px) and (orientation: landscape) {
+      padding: 0 120px;
+    }
+
+  @media (min-height: 414px) and (orientation: landscape) {
+      padding: 0 80px;
+    }
   
-  @media (max-height: 731px) {
+  @media (min-height: 731px) and (orientation: landscape) {
         padding: 0 20px;
     }
 `;

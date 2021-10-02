@@ -34,7 +34,7 @@ const Reload = styled.button`
 
 const Container = styled.div`
 
-@media (max-height: 320px) {
+@media (min-height: 320px) and (orientation: landscape) {
     display: flex;
   }
 `;
@@ -57,7 +57,7 @@ const Content = styled.form`
     margin-top: 40px;
   }
 
-  @media (max-height: 320px) {
+  @media (min-height: 320px) and (orientation: landscape) {
       width: 60%;
       height: 260px;
       margin: 0;
@@ -84,7 +84,7 @@ const Row = styled.div`
     }
   }
 
-  @media (max-height: 320px) {
+  @media (min-height: 320px) and (orientation: landscape) {
     justify-content: center;
     margin-bottom: 5px;
 
@@ -113,7 +113,7 @@ const Wrapper = styled.div`
     height: 130px;
   }
 
-  @media (max-height: 320px) {
+  @media (min-height: 320px) and (orientation: landscape) {
     width: 60px;
     height: 75px;
   }
@@ -151,7 +151,7 @@ const Img = styled.img`
     width: 52px;
   }
 
-  @media (max-height: 320px) {
+  @media (min-height: 320px) and (orientation: landscape) {
     width: 27px;
     margin-bottom: 5px
   }
@@ -160,14 +160,14 @@ const Img = styled.img`
 const Label = styled.label`
   margin: 0 0 5px 0;
 
-  @media (max-height: 320px) {
+  @media (min-height: 320px) and (orientation: landscape) {
     font-size: .60rem;
   }
 `;
 
 const Heading = styled.div`
 
-@media (max-height: 320px) {
+@media (min-height: 320px) and (orientation: landscape) {
     display: flex;
     align-items: center;
     width: 50%;
@@ -195,7 +195,7 @@ const H2 = styled.h2`
     margin: 40px 50px 0 50px;
   }
 
-  @media (max-height: 320px) {
+  @media (min-height: 320px) and (orientation: landscape) {
     margin: 0 8px;
     font-size: 1.8rem;
   }
