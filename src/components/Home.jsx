@@ -8,7 +8,7 @@ const Container = styled.div `
     justify-content: center;
     align-items: center;
 
-    @media screen and (min-height: 320px) and (orientation: landscape) {
+    @media screen and (min-height: 200px) and (orientation: landscape) {
         flex-direction: row;
         height: 255px;
     }
