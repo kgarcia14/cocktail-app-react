@@ -10,46 +10,38 @@ const Container = styled.div `
 
     @media screen and (max-height: 1024px) and (orientation: landscape) {
         height: 959px;
+        flex-direction: row;
     }
 
     @media screen and (max-height: 768px) and (orientation: landscape) {
         height: 703px;
+        flex-direction: row;
     }
 
     @media screen and (max-height: 414px) and (orientation: landscape) {
         height: 349px;
+        flex-direction: row;
     }
 
     @media screen and (max-height: 411px) and (orientation: landscape) {
         height: 346px;
+        flex-direction: row;
     }
 
     @media screen and (max-height: 375px) and (orientation: landscape) {
         height: 310px;
+        flex-direction: row;
     }
 
     @media screen and (max-height: 360px) and (orientation: landscape) {
         height: 295px;
+        flex-direction: row;
     }
 
     @media screen and (max-height: 320px) and (orientation: landscape) {
         flex-direction: row;
         height: 255px;
     }
-
-    
-
-    
-
-   
-
-    
-
-    
-
-    
-
-    
 `;
 
 const H1 = styled.h1 `
