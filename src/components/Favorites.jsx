@@ -2,12 +2,24 @@ import styled from 'styled-components';
 import { useState, useEffect } from "react";
 import CocktailModal from './CocktailModal';
 
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const Heading = styled.div`
+  height: 75vh;
+  display: flex;
+  align-items: center;
+`;
+
 const H2 = styled.h2`
   font-size: 2.2rem;
   font-weight: 500;
-  margin: 150px 10px 0 10px;
+  margin: 0 10px;
   color: #393939;
   text-align: center;
+  position: absolute;
 
   @media (min-width: 360px) {
     font-size: 2.3rem;
@@ -26,6 +38,14 @@ const H2 = styled.h2`
   @media (min-width: 414px) {
     font-size: 2.7rem;
     margin: 150px 30px 30px;
+    }
+
+    @media (max-height: 320px) {
+      height: 50vh;
+    }
+
+    @media (max-height: 731px) {
+        height: 50vh;
     }
 `;
 
@@ -48,6 +68,10 @@ const ImgWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-height: 320px) {
+      width: 75%;
+  }
 `;
 
 const Img = styled.img`
@@ -99,9 +123,11 @@ const Favorites = ({errorMessage}) => {
     }
 
     return ( 
-        <>
+        <Container>
             {favoriteCocktails.length < 1 ? (
-                <H2>Add Some Cocktails To Your Favorites!</H2>
+                <Heading>
+                  <H2>Add Some Cocktails To Your Favorites!</H2>
+                </Heading>
             ) : (
             <Ul>
                 {favoriteCocktails.map((cocktail) => (
@@ -119,7 +145,7 @@ const Favorites = ({errorMessage}) => {
                 ))}
             </Ul>
             )}
-        </>
+        </Container>
      );
 }
  

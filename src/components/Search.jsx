@@ -53,27 +53,45 @@ const Input = styled.input`
   }
 `;
 
+const SearchHeading = styled.div`
+    height: 75%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+
+  @media (max-height: 320px) {
+    height: 100%;
+    }
+`;
+
 const H2 = styled.h2`
   font-size: 2.2rem;
   font-weight: 500;
   color: #393939;
   text-align: center;
-  margin: 150px 40px 0 40px;
+  margin: 0 40px;
   
   @media (min-width: 360px) {
     font-size: 2.5rem;
-    margin: 150px 45px 0 45px;
+    margin: 0 45px;
   }
 
   @media (min-width: 375px) {
-    font-size: 2.8rem;
-    margin: 200px 45px 0 45px;
+    font-size: 2.7rem;
   }
 
   @media (min-width: 414px) {
     font-size: 2.7rem;
-    margin: 200px 45px 0 45px;
   }
+
+  @media (max-height: 320px) {
+      margin: 0;
+      font-size: 2.4rem;
+    }
+  
+  @media (max-height: 731px) {
+        padding: 0 20px;
+    }
 `;
 
 const H4 = styled.h4`
@@ -133,7 +151,10 @@ const Search = () => {
         </Label>
       </Form>
 
-      <H2 id="heading" className="heading">Search For Your Favorite Cocktail!</H2>
+      <SearchHeading>
+        <H2 id="heading" className="heading">Search For Your Favorite Cocktail!</H2>
+      </SearchHeading>
+      
       
         {cocktails === null ? (
           <H4>{errorMessage}</H4>

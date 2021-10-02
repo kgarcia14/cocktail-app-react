@@ -124,7 +124,7 @@ const style = {
   width: "100%",
   bgcolor: "background.paper",
   border: "none",
-  borderRadius: 2,
+  borderRadius: 1.8,
   boxShadow: 24,
   p: 4,
   button: "1.2rem",

@@ -32,7 +32,14 @@ const Reload = styled.button`
   }
 `;
 
-const Container = styled.form`
+const Container = styled.div`
+
+@media (max-height: 320px) {
+    display: flex;
+  }
+`;
+
+const Content = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -48,6 +55,12 @@ const Container = styled.form`
 
   @media (min-width: 768px) {
     margin-top: 40px;
+  }
+
+  @media (max-height: 320px) {
+      width: 60%;
+      height: 260px;
+      margin: 0;
   }
 `;
 
@@ -70,6 +83,15 @@ const Row = styled.div`
       margin: 0 50px;
     }
   }
+
+  @media (max-height: 320px) {
+    justify-content: center;
+    margin-bottom: 5px;
+
+    .center-wrapper {
+      margin: 0 20px;
+    }
+  }
 `;
 
 const Wrapper = styled.div`
@@ -89,7 +111,11 @@ const Wrapper = styled.div`
   @media (min-width: 414px) {
     width: 120px;
     height: 130px;
+  }
 
+  @media (max-height: 320px) {
+    width: 60px;
+    height: 75px;
   }
 `;
 
@@ -124,10 +150,29 @@ const Img = styled.img`
   @media (min-width: 414px) {
     width: 52px;
   }
+
+  @media (max-height: 320px) {
+    width: 27px;
+    margin-bottom: 5px
+  }
 `;
 
 const Label = styled.label`
   margin: 0 0 5px 0;
+
+  @media (max-height: 320px) {
+    font-size: .60rem;
+  }
+`;
+
+const Heading = styled.div`
+
+@media (max-height: 320px) {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin-right: 20px;
+  }
 `;
 
 const H2 = styled.h2`
@@ -148,6 +193,11 @@ const H2 = styled.h2`
 
   @media (min-width: 768px) {
     margin: 40px 50px 0 50px;
+  }
+
+  @media (max-height: 320px) {
+    margin: 0 8px;
+    font-size: 1.8rem;
   }
 `;
 
@@ -183,8 +233,8 @@ const MyBar = () => {
   return (
     <>
       {cocktailsByAlcohol.length < 1 ? (
-        <>
-          <Container>
+        <Container>
+          <Content>
             <Row>
               <Wrapper>
                 <Button type="submit" value="vodka" onClick={handleClick}>
@@ -245,9 +295,11 @@ const MyBar = () => {
                 </Button>
               </Wrapper>
             </Row>
-          </Container>
-          <H2 id="heading">Select For A List Of Cocktails.</H2>
-        </>
+          </Content>
+          <Heading>
+            <H2 id="heading">Select For A List Of Cocktails.</H2>
+          </Heading>
+        </Container>
       ) : (
         <Mybarlist>
           <ReloadDiv>
