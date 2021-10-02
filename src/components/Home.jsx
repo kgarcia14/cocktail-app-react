@@ -8,39 +8,39 @@ const Container = styled.div `
     justify-content: center;
     align-items: center;
 
-    @media screen and (max-height: 1024px) and (orientation: landscape) {
-        height: 959px;
-        flex-direction: row;
-    }
-
-    @media screen and (max-height: 768px) and (orientation: landscape) {
-        height: 703px;
-        flex-direction: row;
-    }
-
-    @media screen and (max-height: 414px) and (orientation: landscape) {
-        height: 349px;
-        flex-direction: row;
-    }
-
-    @media screen and (max-height: 411px) and (orientation: landscape) {
-        height: 346px;
-        flex-direction: row;
-    }
-
-    @media screen and (max-height: 375px) and (orientation: landscape) {
-        height: 310px;
-        flex-direction: row;
-    }
-
-    @media screen and (max-height: 360px) and (orientation: landscape) {
-        height: 295px;
-        flex-direction: row;
-    }
-
-    @media screen and (max-height: 320px) and (orientation: landscape) {
+    @media screen and (min-height: 320px) and (orientation: landscape) {
         flex-direction: row;
         height: 255px;
+    }
+
+    @media screen and (min-height: 360px) and (orientation: landscape) {
+        height: 295px;
+    }
+
+    @media screen and (min-height: 375px) and (orientation: landscape) {
+        height: 310px;
+    }
+
+    @media screen and (min-height: 411px) and (orientation: landscape) {
+        height: 346px;
+    }
+
+    @media screen and (min-height: 414px) and (orientation: landscape) {
+        height: 349px;
+    }
+
+    @media screen and (min-height: 414px) and (orientation: landscape) {
+        height: 349px;
+    }
+
+    @media screen and (min-height: 768px) and (orientation: landscape) {
+        height: 703px;
+    }
+
+    @media screen and (max-height: 769px) and (orientation: landscape) {
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
     }
 `;
 
@@ -63,6 +63,42 @@ const H1 = styled.h1 `
         padding: 0 80px;
     }
 
+    @media screen and (min-width: 1024px) {
+        font-size: 4.5rem;
+        padding: 0 185px;
+    }
+
+    @media screen and (min-height: 320px) and (orientation: landscape) {
+        width: 60%;
+        font-size: 2.25rem;
+        margin: 0 0 0 50px;
+    }
+
+    @media screen and (min-height: 360px) and (orientation: landscape) {
+        font-size: 2.25rem;
+        padding: 20px;
+        margin: 0 0 0 50px;
+    }
+
+    @media screen and (min-height: 375px) and (orientation: landscape) {
+        padding: 30px;
+    }
+
+    @media screen and (min-height: 411px) and (orientation: landscape) {
+        font-size: 2.8rem;
+        padding: 0 20px;
+    }
+
+    @media screen and (min-height: 768px) and (orientation: landscape) {
+        font-size: 4rem;
+    }
+
+    @media screen and (min-height: 1024px) and (orientation: landscape) {
+        font-size: 4.5rem;
+        padding: 100px;
+        margin: 0 0 0 60px;
+    }
+
     @media screen and (min-width: 812px) and (max-height: 375px) and (orientation: landscape) {
         font-size: 2.7rem;
         padding: 0  50px;
@@ -70,42 +106,6 @@ const H1 = styled.h1 `
 
     @media screen and (min-width: 823px) and (max-height: 411px) and (orientation: landscape) {
         padding: 0  50px;
-    }
-
-    @media screen and (min-width: 1024px) {
-        font-size: 4.5rem;
-        padding: 0 185px;
-    }
-
-    @media screen and (max-height: 1024px) and (orientation: landscape) {
-        font-size: 4.5rem;
-        padding: 100px;
-        margin: 0 0 0 60px;
-    }
-
-    @media screen and (max-height: 768px) and (orientation: landscape) {
-        font-size: 4rem;
-    }
-
-    @media screen and (max-height: 411px) and (orientation: landscape) {
-        font-size: 2.8rem;
-        padding: 0 20px;
-    }
-
-    @media screen and (max-height: 375px) and (orientation: landscape) {
-        padding: 30px;
-    }
-
-    @media screen and (max-height: 360px) and (orientation: landscape) {
-        font-size: 2.25rem;
-        padding: 20px;
-        margin: 0 0 0 50px;
-    }
-
-    @media screen and (max-height: 320px) and (orientation: landscape) {
-        width: 60%;
-        font-size: 2.25rem;
-        margin: 0 0 0 50px;
     }
 `;
 
@@ -115,7 +115,7 @@ const ImgWrapper = styled.div `
     width: 100%;
     overflow: hidden;
 
-    @media screen and (max-height: 320px) and (orientation: landscape) {
+    @media screen and (min-height: 320px) and (orientation: landscape) {
         width: 40%;
     }
 `;
@@ -140,6 +140,34 @@ const Img = styled.img `
         width: 160px;
     }
 
+    @media screen and (min-width: 1024px) {
+        width: 235px;
+    }
+
+    @media screen and (min-height: 320px) and (orientation: landscape) {
+        width: 85px;
+        margin: 0 50px 20px 0;
+    }
+
+    @media screen and (min-height: 360px) and (orientation: landscape) {
+        width: 100px;
+        margin: 0 50px 0 0;
+    }
+
+    @media screen and (min-height: 414px) and (orientation: landscape) {
+        width: 120px;
+    }
+
+    @media screen and (min-height: 768px) and (orientation: landscape) {
+        width: 200px;
+        margin-right: 150px;
+    }
+
+    @media screen and (min-height: 1024px) and (orientation: landscape) {
+        width: 230px;
+        margin-right: 220px;
+    }
+
     @media screen and (min-width: 812px) and (max-height: 375px) and (orientation: landscape) {
         margin-right: 150px;
     }
@@ -147,34 +175,6 @@ const Img = styled.img `
     @media screen and (min-width: 823px) and (max-height: 411px) and (orientation: landscape) {
         width: 120px;
         margin-right: 125px;
-    }
-
-    @media screen and (min-width: 1024px) {
-        width: 235px;
-    }
-
-    @media screen and (max-height: 1024px) and (orientation: landscape) {
-        width: 230px;
-        margin-right: 220px;
-    }
-
-    @media screen and (max-height: 768px) and (orientation: landscape) {
-        width: 200px;
-        margin-right: 150px;
-    }
-
-    @media screen and (max-height: 414px) and (orientation: landscape) {
-        width: 120px;
-    }
-
-    @media screen and (max-height: 360px) and (orientation: landscape) {
-        width: 100px;
-        margin: 0 50px 0 0;
-    }
-
-    @media screen and (max-height: 320px) and (orientation: landscape) {
-        width: 85px;
-        margin: 0 50px 20px 0;
     }
     
 `;
