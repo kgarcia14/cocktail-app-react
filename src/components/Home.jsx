@@ -2,45 +2,14 @@ import styled from 'styled-components';
 
 const Container = styled.div `
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    @media screen and (min-height: 320px) and (orientation: landscape) {
+    @media screen and (min-height: 280px) and (orientation: landscape) {
         flex-direction: row;
-        height: 255px;
-    }
-
-    @media screen and (min-height: 360px) and (orientation: landscape) {
-        height: 295px;
-    }
-
-    @media screen and (min-height: 375px) and (orientation: landscape) {
-        height: 310px;
-    }
-
-    @media screen and (min-height: 411px) and (orientation: landscape) {
-        height: 346px;
-    }
-
-    @media screen and (min-height: 414px) and (orientation: landscape) {
-        height: 349px;
-    }
-
-    @media screen and (min-height: 414px) and (orientation: landscape) {
-        height: 349px;
-    }
-
-    @media screen and (min-height: 768px) and (orientation: landscape) {
-        height: 703px;
-    }
-
-    @media screen and (max-height: 769px) and (orientation: landscape) {
-        height: 100%;
-        flex-direction: column;
-        justify-content: center;
     }
 `;
 
@@ -66,6 +35,13 @@ const H1 = styled.h1 `
     @media screen and (min-width: 1024px) {
         font-size: 4.5rem;
         padding: 0 185px;
+    }
+
+    @media screen and (min-height: 280px) and (orientation: landscape) {
+        width: 100%;
+        font-size: 2.5rem;
+        margin: 0 0 0 70px;
+        padding: 0;
     }
 
     @media screen and (min-height: 320px) and (orientation: landscape) {
@@ -94,9 +70,8 @@ const H1 = styled.h1 `
     }
 
     @media screen and (min-height: 1024px) and (orientation: landscape) {
-        font-size: 4.5rem;
-        padding: 100px;
-        margin: 0 0 0 60px;
+        font-size: 5rem;
+        padding: 0 75px;
     }
 
     @media screen and (min-width: 812px) and (max-height: 375px) and (orientation: landscape) {
@@ -144,7 +119,7 @@ const Img = styled.img `
         width: 235px;
     }
 
-    @media screen and (min-height: 320px) and (orientation: landscape) {
+    @media screen and (min-height: 280px) and (orientation: landscape) {
         width: 85px;
         margin: 0 50px 20px 0;
     }
