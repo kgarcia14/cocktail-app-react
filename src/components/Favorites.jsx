@@ -14,9 +14,13 @@ const Heading = styled.div`
   align-items: center;
   justify-content: center;
 
+  @media screen and (min-width: 568px) and (orientation: landscape) {
+      height: 50vh;
+  }
+
   @media screen and (min-width: 812px) and (orientation: landscape) {
       margin: 0;
-      height: 90vh
+      height: 90vh;
   }
 `;
 
