@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Container = styled.div `
     width: 100%;
-    height: 90vh;
+    height: 84vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -45,12 +45,12 @@ const H1 = styled.h1 `
 
     @media screen and (min-width: 640px) and (orientation: landscape) {
         font-size: 2.25rem;
-        padding: 20px;
+        padding: 25px;
         margin: 0 0 0 50px;
     }
 
     @media screen and (min-width: 667px) and (orientation: landscape) {
-        padding: 30px;
+        padding: 0 50px;
     }
 
     @media screen and (min-width: 731px) and (orientation: landscape) {
