@@ -58,7 +58,7 @@ const Input = styled.input`
 `;
 
 const SearchHeading = styled.div`
-    height: 75%;
+    height: 75vh;
     display: flex;
     align-items: center;
     position: absolute;
