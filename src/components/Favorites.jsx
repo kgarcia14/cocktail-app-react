@@ -5,12 +5,18 @@ import CocktailModal from './CocktailModal';
 const Container = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
 `;
 
 const Heading = styled.div`
   height: 75vh;
   display: flex;
   align-items: center;
+
+  @media screen and (min-width: 812px) and (orientation: landscape) {
+      margin: 0;
+      height: 90vh
+  }
 `;
 
 const H2 = styled.h2`
@@ -19,7 +25,6 @@ const H2 = styled.h2`
   margin: 0 10px;
   color: #393939;
   text-align: center;
-  position: absolute;
 
   @media screen and (min-width: 360px) {
     font-size: 2.3rem;
@@ -35,18 +40,19 @@ const H2 = styled.h2`
     text-align: center;
     }
 
+  @media screen and (min-width: 411px) {
+    padding: 0 20px;
+    }
+
   @media screen and (min-width: 414px) {
     font-size: 2.7rem;
-    margin: 150px 30px 30px;
+    padding: 0 25px;
     }
 
-    @media screen and (max-height: 320px) {
-      height: 50vh;
-    }
-
-    @media screen and (max-height: 731px) {
-        height: 50vh;
-    }
+    @media screen and (min-width: 812px) and (orientation: landscape) {
+      padding: 0 40px;
+      margin: 0;
+  }
 `;
 
 const Ul = styled.ul`
@@ -68,10 +74,6 @@ const ImgWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  @media screen and (max-height: 320px) {
-      width: 75%;
-  }
 `;
 
 const Img = styled.img`
