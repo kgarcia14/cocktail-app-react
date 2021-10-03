@@ -81,7 +81,7 @@ const H2 = styled.h2`
   }
 
   @media screen and (min-width: 375px) {
-    font-size: 2.7rem;
+    font-size: 2.5rem;
   }
 
   @media screen and (min-width: 414px) {
