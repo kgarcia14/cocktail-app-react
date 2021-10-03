@@ -9,7 +9,7 @@ const Container = styled.div`
 `;
 
 const Heading = styled.div`
-  height: 75vh;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,7 +35,7 @@ const H2 = styled.h2`
     }
 
   @media screen and (min-width: 375px) {
-    font-size: 2.3rem;
+    font-size: 2.5rem;
     margin: 150px 25px 25px;
     color: #393939;
     text-align: center;
