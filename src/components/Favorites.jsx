@@ -12,6 +12,7 @@ const Heading = styled.div`
   height: 75vh;
   display: flex;
   align-items: center;
+  justify-content: center;
 
   @media screen and (min-width: 812px) and (orientation: landscape) {
       margin: 0;
@@ -58,6 +59,7 @@ const H2 = styled.h2`
 const Ul = styled.ul`
     display: flex;
     flex-direction: column-reverse;
+    justify-content: center;
     align-items: center;
     margin: 30px 0 90px 0;
 `;
