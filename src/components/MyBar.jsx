@@ -34,8 +34,10 @@ const Reload = styled.button`
 
 const Container = styled.div`
 
-@media screen and (min-height: 320px) and (orientation: landscape) {
+@media screen and (min-width: 568px) and (orientation: landscape) {
+    height: 80vh;
     display: flex;
+    align-items: center;
   }
 `;
 
@@ -57,7 +59,7 @@ const Content = styled.form`
     margin-top: 40px;
   }
 
-  @media screen and (min-height: 320px) and (orientation: landscape) {
+  @media screen and (min-width: 568px) and (orientation: landscape) {
       width: 60%;
       height: 260px;
       margin: 0;
@@ -84,7 +86,7 @@ const Row = styled.div`
     }
   }
 
-  @media screen and (min-height: 320px) and (orientation: landscape) {
+  @media screen and (min-width: 568px) and (orientation: landscape) {
     justify-content: center;
     margin-bottom: 5px;
 
@@ -113,10 +115,30 @@ const Wrapper = styled.div`
     height: 130px;
   }
 
-  @media screen and (min-height: 320px) and (orientation: landscape) {
+  @media screen and (min-width: 1024px) {
+      width: 160px;
+      height: 185px;
+    }
+
+  @media screen and (min-width: 568px) and (orientation: landscape) {
     width: 60px;
     height: 75px;
   }
+
+  @media screen and (min-width: 823px) and (orientation: landscape) {
+    width: 85px;
+    height: 95px;
+    }
+
+  @media screen and (min-width: 1024px) and (orientation: landscape) {
+    width: 100px;
+    height: 120px;
+    }
+
+    @media screen and (min-width: 1366px) and (orientation: landscape) {
+      width: 160px;
+      height: 180px;
+    }
 `;
 
 const Button = styled.button`
@@ -151,23 +173,58 @@ const Img = styled.img`
     width: 52px;
   }
 
-  @media screen and (min-height: 320px) and (orientation: landscape) {
+  @media screen and (min-width: 568px) and (orientation: landscape) {
     width: 27px;
     margin-bottom: 5px
   }
+
+  @media screen and (min-width: 1024px) {
+    width: 75px;
+    }
+
+  @media screen and (min-width: 823px) and (orientation: landscape) {
+    width: 35px;
+  }
+
+  @media screen and (min-width: 1024px) and (orientation: landscape) {
+    width: 50px;
+    }
+
+    @media screen and (min-width: 1366px) and (orientation: landscape) {
+      width: 75px;
+    }
 `;
 
 const Label = styled.label`
   margin: 0 0 5px 0;
 
-  @media screen and (min-height: 320px) and (orientation: landscape) {
+  @media screen and (min-width: 1024px) {
+      font-size: 1.4rem;
+      margin: 8px 0;
+    }
+
+  @media screen and (min-width: 568px) and (orientation: landscape) {
     font-size: .60rem;
   }
+
+  @media screen and (min-width: 823px) and (orientation: landscape) {
+    font-size: .85rem;
+  }
+
+  @media screen and (min-width: 1024px) and (orientation: landscape) {
+    margin: 0 0 5px 0;
+    font-size: 1rem;
+    }
+
+    @media screen and (min-width: 1366px) and (orientation: landscape) {
+      font-size: 1.3rem;
+      margin: 8px 0;
+    }
 `;
 
 const Heading = styled.div`
 
-@media screen and (min-height: 320px) and (orientation: landscape) {
+@media screen and (min-width: 568px) and (orientation: landscape) {
     display: flex;
     align-items: center;
     width: 50%;
@@ -195,10 +252,22 @@ const H2 = styled.h2`
     margin: 40px 50px 0 50px;
   }
 
-  @media screen and (min-height: 320px) and (orientation: landscape) {
-    margin: 0 8px;
+  @media screen and (min-width: 1024px) {
+    font-size: 3rem;
+    }
+
+  @media screen and (min-width: 568px) and (orientation: landscape) {
+    margin: 0 80px 0 0;
     font-size: 1.8rem;
   }
+
+  @media screen and (min-width: 823px) and (orientation: landscape) {
+    font-size: 2.5rem;
+    }
+
+  @media screen and (min-width: 1366px) and (orientation: landscape) {
+    font-size: 4rem;
+    }
 `;
 
 const Cocktails = styled.div`
