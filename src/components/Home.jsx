@@ -1,14 +1,16 @@
 import styled from 'styled-components';
+import { useEffect } from 'react';
 
 const Container = styled.div `
     width: 100%;
-    height: 84vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
     @media screen and (min-width: 568px) and (orientation: landscape) {
+        height: 85vh;
         flex-direction: row;
     }
 `;
@@ -150,6 +152,11 @@ const Img = styled.img `
 `;
 
 const Home = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
+
     return ( 
         <Container className="home-container">
             <H1 className="home-h1">Discover A World Of Delicious Cocktails.</H1>
