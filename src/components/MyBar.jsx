@@ -274,7 +274,7 @@ const Cocktails = styled.div`
   margin-top: -30px;
 `;
 
-const MyBar = () => {
+const MyBar = ({ theme }) => {
   const [cocktailsByAlcohol, setCocktailsByAlcohol] = useState([]);
 
   const handleClick = async (e) => {
@@ -308,19 +308,19 @@ const MyBar = () => {
               <Wrapper>
                 <Button type="submit" value="vodka" onClick={handleClick}>
                   <Img src="../../../images/vodka.png" alt="vodka"></Img>
-                  <Label>Vodka</Label>
+                  <Label style={theme === 'dark' ? {color: '#31d0aa'} : {}}>Vodka</Label>
                 </Button>
               </Wrapper>
               <Wrapper className="center-wrapper">
                 <Button type="submit" value="gin" onClick={handleClick}>
                   <Img src="../../../images/gin.png" alt="gin"></Img>
-                  <Label>Gin</Label>
+                  <Label style={theme === 'dark' ? {color: '#31d0aa'} : {}}>Gin</Label>
                 </Button>
               </Wrapper>
               <Wrapper>
                 <Button type="submit" value="tequila" onClick={handleClick}>
                   <Img src="../../../images/tequila.png" alt="tequila"></Img>
-                  <Label>Tequila</Label>
+                  <Label style={theme === 'dark' ? {color: '#31d0aa'} : {}}>Tequila</Label>
                 </Button>
               </Wrapper>
             </Row>
@@ -328,19 +328,19 @@ const MyBar = () => {
               <Wrapper>
                 <Button type="submit" value="rum" onClick={handleClick}>
                   <Img src="../../../images/rum.png" alt="rum"></Img>
-                  <Label>Rum</Label>
+                  <Label style={theme === 'dark' ? {color: '#31d0aa'} : {}}>Rum</Label>
                 </Button>
               </Wrapper>
               <Wrapper className="center-wrapper">
                 <Button type="submit" value="bourbon" onClick={handleClick}>
                   <Img src="../../../images/bourbon.png" alt="bourbon"></Img>
-                  <Label>Bourbon</Label>
+                  <Label style={theme === 'dark' ? {color: '#31d0aa'} : {}}>Bourbon</Label>
                 </Button>
               </Wrapper>
               <Wrapper>
                 <Button type="submit" value="scotch" onClick={handleClick}>
                   <Img src="../../../images/scotch.png" alt="scotch"></Img>
-                  <Label>Scotch</Label>
+                  <Label style={theme === 'dark' ? {color: '#31d0aa'} : {}}>Scotch</Label>
                 </Button>
               </Wrapper>
             </Row>
@@ -348,34 +348,34 @@ const MyBar = () => {
               <Wrapper>
                 <Button type="submit" value="brandy" onClick={handleClick}>
                   <Img src="../../../images/brandy.png" alt="brandy"></Img>
-                  <Label>Brandy</Label>
+                  <Label style={theme === 'dark' ? {color: '#31d0aa'} : {}}>Brandy</Label>
                 </Button>
               </Wrapper>
               <Wrapper className="center-wrapper">
                 <Button type="submit" value="cognac" onClick={handleClick}>
                   <Img src="../../../images/cognac.png" alt="cognac"></Img>
-                  <Label>Cognac</Label>
+                  <Label style={theme === 'dark' ? {color: '#31d0aa'} : {}}>Cognac</Label>
                 </Button>
               </Wrapper>
               <Wrapper>
                 <Button type="submit" value="champagne" onClick={handleClick}>
                   <Img src="../../../images/champagne.png" alt="champagne"></Img>
-                  <Label>Champagne</Label>
+                  <Label style={theme === 'dark' ? {color: '#31d0aa'} : {}}>Champagne</Label>
                 </Button>
               </Wrapper>
             </Row>
           </Content>
           <Heading>
-            <H2 id="heading">Select For A List Of Cocktails.</H2>
+            <H2 id="heading"  style={theme === 'dark' ? {color: '#c4bfb7'} : {}}>Select For A List Of Cocktails.</H2>
           </Heading>
         </Container>
       ) : (
         <Mybarlist>
-          <ReloadDiv>
-            <Reload type="button" onClick={reload}>Go Back</Reload>
+          <ReloadDiv style={theme === 'dark' ? {backgroundColor: '#181a1b'} : {}}>
+            <Reload type="button" onClick={reload} style={theme === 'dark' ? {background: 'none'} : {}}>Go Back</Reload>
           </ReloadDiv>
           <Cocktails>
-            <DisplayCocktail cocktails={cocktailsByAlcohol} />
+            <DisplayCocktail cocktails={cocktailsByAlcohol} theme={theme} />
           </Cocktails>
         </Mybarlist>
       )}

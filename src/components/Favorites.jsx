@@ -119,7 +119,7 @@ const Button = styled.button`
   margin-right: 10px;
 `;
 
-const Favorites = ({errorMessage}) => {
+const Favorites = ({errorMessage, theme}) => {
     const localData = JSON.parse(localStorage.getItem('favorites') || '[]');
     console.log(localData);
     const [favoriteCocktails, setFavoriteCocktails] = useState(localData);
@@ -142,14 +142,14 @@ const Favorites = ({errorMessage}) => {
         <Container>
             {favoriteCocktails.length < 1 ? (
                 <Heading>
-                  <H2>Add Some Cocktails To Your Favorites!</H2>
+                  <H2 style={theme === 'dark' ? {color: '#c4bfb7'} : {}}>Add Some Cocktails To Your Favorites!</H2>
                 </Heading>
             ) : (
             <Ul>
                 {favoriteCocktails.map((cocktail) => (
                     <Li key={cocktail.idDrink}>
                         <ImgWrapper>
-                            <H3>{cocktail.strDrink}</H3>
+                            <H3 style={theme === 'dark' ? {color: '#c4bfb7'} : {}}>{cocktail.strDrink}</H3>
                             <Img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
                             <ImgContent>
                             <CocktailModal cocktail={cocktail} errorMessage={errorMessage} />

@@ -19,3 +19,13 @@ code {
 .hidden {
   display: none;
 }
+
+
+/* Dark Mode */
+.dark-body {
+  background-color: #181a1b;
+}
+
+.active-dark {
+  background-color: #2a2e30;
+}

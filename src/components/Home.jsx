@@ -14,6 +14,15 @@ const Container = styled.div `
     }
 `;
 
+const Button = styled.button`
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 15px 15px 0 0;
+    background: none;
+    border: none;
+`;
+
 const H1 = styled.h1 `
     font-size: 2.2rem;
     font-weight: 500;
@@ -150,11 +159,12 @@ const Img = styled.img `
     
 `;
 
-const Home = () => {
+const Home = ({ theme, toggleTheme }) => {
 
     return ( 
-        <Container className="home-container">
-            <H1 className="home-h1">Discover A World Of Delicious Cocktails.</H1>
+        <Container className="home-container" style={theme === 'dark'? {backgroundColor: '#181a1b'} : {backgroundColor: '#fff'}}>
+            <Button type="button" onClick={toggleTheme} style={theme === 'dark' ? {color: '#31d0aa'} : {color: '#6100FF'}}>{theme === 'dark' ? 'Go Light' : 'Go Dark'}</Button>
+            <H1 className="home-h1" style={theme === 'dark'? {color: '#c4bfb7'} : {}}>Discover A World Of Delicious Cocktails.</H1>
             <ImgWrapper className="home-img-wrapper">
                 <Img src="../../../images/testastronaut.svg" className="home-img"></Img>
             </ImgWrapper>
