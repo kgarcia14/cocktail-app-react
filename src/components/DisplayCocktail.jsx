@@ -15,7 +15,7 @@ const Ul = styled.ul`
   width: 90%;
 
   @media screen and (min-width: 568px) and (orientation: landscape) {
-    width: 50%
+    width: 40%;
     }
 `;
 
