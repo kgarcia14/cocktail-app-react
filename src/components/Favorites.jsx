@@ -9,7 +9,7 @@ const Container = styled.div`
 `;
 
 const Heading = styled.div`
-  height: 75vh;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,8 +54,12 @@ const H2 = styled.h2`
     padding: 0 25px;
     }
 
+    @media screen and (min-width: 568px) and (orientation: landscape) {
+      font-size: 2.4rem;
+  }
+
     @media screen and (min-width: 812px) and (orientation: landscape) {
-      padding: 0 40px;
+      padding: 0 80px;
       margin: 0;
   }
 `;
@@ -115,8 +119,6 @@ const Button = styled.button`
   margin-right: 10px;
 `;
 
-
-
 const Favorites = ({errorMessage}) => {
     const localData = JSON.parse(localStorage.getItem('favorites') || '[]');
     console.log(localData);
@@ -125,6 +127,8 @@ const Favorites = ({errorMessage}) => {
     useEffect(() => {
         localStorage.setItem('favorites', JSON.stringify(favoriteCocktails))
         
+        window.scrollTo(0, 0)
+
       }, [favoriteCocktails])
 
     const handleDelete = (id) => {
