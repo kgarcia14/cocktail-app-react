@@ -68,7 +68,7 @@ const Button = styled.button`
 `;
 
 
-const DisplayCocktail = ({ cocktails, errorMessage }) => {
+const DisplayCocktail = ({ cocktails, errorMessage, theme }) => {
   const localData = JSON.parse(localStorage.getItem('favorites') || '[]');
 
   const [favoriteCocktails, setFavoriteCocktails] = useState(localData);
@@ -106,7 +106,7 @@ const DisplayCocktail = ({ cocktails, errorMessage }) => {
       {cocktails.map((cocktail) => (
         <Li key={cocktail.idDrink} id={cocktail.idDrink}>
           <ImgWrapper>
-            <H3>{cocktail.strDrink}</H3>
+            <H3 style={theme === 'dark' ? {color: '#c4bfb7'} : {}}>{cocktail.strDrink}</H3>
             <Img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
             <ImgContent>
               <CocktailModal cocktail={cocktail} errorMessage={errorMessage} />

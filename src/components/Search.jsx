@@ -114,7 +114,7 @@ const H4 = styled.h4`
   margin: 150px 0 0 0;
 `;
 
-const Search = () => {
+const Search = ({ theme }) => {
   const [inputValue, setInputValue] = useState("");
   const [cocktails, setCocktails] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
@@ -152,27 +152,28 @@ const Search = () => {
 
   return (
     <Container>
-      <Form onSubmit={handleSubmit}>
-        <Label>
+      <Form onSubmit={handleSubmit} style={theme === 'dark' ? {backgroundColor: '#181a1b'} : {}}>
+        <Label style={theme === 'dark' ? {color: '#31d0aa'} : {}}>
           Search Cocktail
           <Input
             type="text"
             required
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
+            style={theme === 'dark' ? {background: 'none', color: '#c4bfb7'} : {}}
           />
         </Label>
       </Form>
 
       <SearchHeading>
-        <H2 id="heading" className="heading">Search For Your Favorite Cocktail!</H2>
+        <H2 id="heading" className="heading" style={theme === 'dark' ? {color: '#c4bfb7'} : {}}>Search For Your Favorite Cocktail!</H2>
       </SearchHeading>
       
       
         {cocktails === null ? (
           <H4>{errorMessage}</H4>
         ) : (
-          <DisplayCocktail cocktails={cocktails} errorMessage={errorMessage} />
+          <DisplayCocktail cocktails={cocktails} errorMessage={errorMessage} theme={theme}/>
         )}
         
     </Container>

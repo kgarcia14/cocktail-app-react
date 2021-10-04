@@ -56,7 +56,7 @@ const Img = styled.img`
   }
 `;
 
-const Navbar = () => {
+const Navbar = ({ theme }) => {
   const [url, setUrl] = useState('');
 
   const location = useLocation();
@@ -70,27 +70,27 @@ const Navbar = () => {
   }, [location.pathname])
 
   return (
-    <Nav>
+    <Nav style={theme === 'dark' ? {backgroundColor: '#242527'} : {}}>
       <NavItem>
-        <NavLink exact activeClassName="active" className="nav-link" to="/">
+        <NavLink exact activeClassName={theme === 'dark' ? 'active-dark' : 'active'} className="nav-link" to="/">
           <Img src="../../../images/explore.svg"></Img>
           <Label>Home</Label>
         </NavLink>
       </NavItem>
       <NavItem>
-        <NavLink activeClassName="active" className="nav-link" to="/search" onClick={handleClick}>
+        <NavLink activeClassName={theme === 'dark' ? 'active-dark' : 'active'}  className="nav-link" to="/search" onClick={handleClick}>
           <Img src="../../../images/search.svg"></Img>
           <Label>Search</Label>
         </NavLink>
       </NavItem>
       <NavItem>
-        <NavLink activeClassName="active" className="nav-link" to="/mybar">
+        <NavLink activeClassName={theme === 'dark' ? 'active-dark' : 'active'}  className="nav-link" to="/mybar">
             <Img src="../../../images/my-bar.svg"></Img>
           <Label>My Bar</Label>
         </NavLink>
       </NavItem>
       <NavItem>
-        <NavLink activeClassName="active" className="nav-link" to="/favorites">
+        <NavLink activeClassName={theme === 'dark' ? 'active-dark' : 'active'}  className="nav-link" to="/favorites">
           <Img src="../../../images/favorites.svg"></Img>
           <Label>Favorites</Label>
         </NavLink>
