@@ -66,6 +66,10 @@ const Ul = styled.ul`
     justify-content: center;
     align-items: center;
     margin: 30px 0 90px 0;
+
+    @media screen and (min-width: 568px) and (orientation: landscape) {
+    width: 50%
+    }
 `;
 
 const Li = styled.li`

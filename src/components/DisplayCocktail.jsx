@@ -8,18 +8,15 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  @media screen and (max-height: 320px) {
-
-    }
 `;
 
 const Ul = styled.ul`
   margin: 100px 0 40px 0;
+  width: 90%;
 
-  @media screen and (max-height: 320px) {
-
-  }
+  @media screen and (min-width: 568px) and (orientation: landscape) {
+    width: 50%
+    }
 `;
 
 const Li = styled.li`
@@ -30,14 +27,9 @@ const Li = styled.li`
 `;
 
 const ImgWrapper = styled.div`
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-
-  @media screen and (max-height: 320px) {
-      width: 75%;
-  }
 `;
 
 const Img = styled.img`
