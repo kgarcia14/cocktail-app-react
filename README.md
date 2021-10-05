@@ -53,8 +53,6 @@ One of the bigger challenges I had was getting each unique cocktail to display i
 
 
 
-### Screenshots
-
 **Light-Theme**
 <div>
 <img src="./public/images/cocktailhour-screenshots/light-home.jpg" width="100" height="200" alt="light theme home page"/>

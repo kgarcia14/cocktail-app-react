@@ -151,7 +151,7 @@ const Favorites = ({errorMessage, theme}) => {
                             <H3 style={theme === 'dark' ? {color: '#c4bfb7'} : {color: '#393939'}}>{cocktail.strDrink}</H3>
                             <Img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
                             <ImgContent>
-                              <CocktailModal cocktail={cocktail} errorMessage={errorMessage} />
+                              <CocktailModal cocktail={cocktail} errorMessage={errorMessage} theme={theme}/>
                               <Button type="button" onClick={() => handleDelete(cocktail.idDrink)}>Remove</Button>
                             </ImgContent>
                         </ImgWrapper>
