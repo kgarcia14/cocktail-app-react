@@ -1,15 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const DarkMode = () => {
-    const [theme, setTheme] = useState('light')
+  const localData = JSON.parse(localStorage.getItem("theme") || "[]");
 
-    const toggleTheme = () => {
-        theme === 'light' ? setTheme('dark') :  setTheme('light');
+  const [theme, setTheme] = useState(localData);
 
-        theme === 'light' ? document.querySelector('body').classList.add('dark-body') : document.querySelector('body').classList.remove('dark-body')
-    }
+  useEffect(() => {
+    localStorage.setItem("theme", JSON.stringify(theme));
+  }, [theme]);
 
-    return [theme, toggleTheme];
-}
- 
+  const toggleTheme = () => {
+
+    theme === "light" ? setTheme("dark") : setTheme("light");
+
+    theme === "light" ? document.querySelector("body").classList.add("dark-body") : document.querySelector("body").classList.remove("dark-body");
+  };
+
+  return [theme, toggleTheme];
+};
+
 export default DarkMode;

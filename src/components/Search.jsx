@@ -4,13 +4,10 @@ import axios from "axios";
 import DisplayCocktail from "./DisplayCocktail";
 
 const Container = styled.div`
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  @media screen and (max-height: 320px) and (orientation: landscape) {
-    height: 255px;
-    }
 `;
 
 const Form = styled.form`
@@ -151,7 +148,7 @@ const Search = ({ theme }) => {
   };
 
   return (
-    <Container>
+    <Container style={theme === 'dark'? {backgroundColor: '#181a1b'} : {backgroundColor: '#fff'}}>
       <Form onSubmit={handleSubmit} style={theme === 'dark' ? {backgroundColor: '#181a1b'} : {}}>
         <Label style={theme === 'dark' ? {color: '#31d0aa'} : {}}>
           Search Cocktail

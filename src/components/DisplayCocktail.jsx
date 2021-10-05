@@ -101,7 +101,7 @@ const DisplayCocktail = ({ cocktails, errorMessage, theme }) => {
 }
   
   return (
-    <Container>
+    <Container style={theme === 'dark' ? {backgroundColor: '#181a1b'} : {}}>
     <Ul>
       {cocktails.map((cocktail) => (
         <Li key={cocktail.idDrink} id={cocktail.idDrink}>

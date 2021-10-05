@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { useEffect } from 'react';
 
 const Container = styled.div `
     width: 100%;
@@ -18,7 +19,8 @@ const Button = styled.button`
     position: fixed;
     top: 0;
     right: 0;
-    margin: 15px 15px 0 0;
+    margin: 25px 25px 0 0;
+    font-size: 1rem;
     background: none;
     border: none;
 `;
