@@ -4,7 +4,7 @@ import CocktailModal from './CocktailModal';
 
 const Container = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 `;
 
@@ -68,7 +68,6 @@ const Ul = styled.ul`
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
-    align-items: center;
     margin: 30px 0 90px 0;
 
     @media screen and (min-width: 568px) and (orientation: landscape) {
@@ -139,13 +138,13 @@ const Favorites = ({errorMessage, theme}) => {
     }
 
     return ( 
-        <Container>
+        <Container  style={theme === 'dark' ? {backgroundColor: '#181a1b'} : {}}>
             {favoriteCocktails.length < 1 ? (
                 <Heading>
                   <H2 style={theme === 'dark' ? {color: '#c4bfb7'} : {}}>Add Some Cocktails To Your Favorites!</H2>
                 </Heading>
             ) : (
-            <Ul>
+            <Ul style={theme === 'dark' ? {backgroundColor: '#181a1b'} : {}}>
                 {favoriteCocktails.map((cocktail) => (
                     <Li key={cocktail.idDrink}>
                         <ImgWrapper>

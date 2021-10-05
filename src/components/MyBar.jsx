@@ -33,9 +33,9 @@ const Reload = styled.button`
 `;
 
 const Container = styled.div`
+height: 100vh;
 
 @media screen and (min-width: 568px) and (orientation: landscape) {
-    height: 80vh;
     display: flex;
     align-items: center;
   }
@@ -302,7 +302,7 @@ const MyBar = ({ theme }) => {
   return (
     <>
       {cocktailsByAlcohol.length < 1 ? (
-        <Container>
+        <Container style={theme === 'dark'? {backgroundColor: '#181a1b'} : {backgroundColor: '#fff'}}>
           <Content>
             <Row>
               <Wrapper>
@@ -374,7 +374,7 @@ const MyBar = ({ theme }) => {
           <ReloadDiv style={theme === 'dark' ? {backgroundColor: '#181a1b'} : {}}>
             <Reload type="button" onClick={reload} style={theme === 'dark' ? {background: 'none'} : {}}>Go Back</Reload>
           </ReloadDiv>
-          <Cocktails>
+          <Cocktails style={theme === 'dark' ? {backgroundColor: '#181a1b'} : {}}>
             <DisplayCocktail cocktails={cocktailsByAlcohol} theme={theme} />
           </Cocktails>
         </Mybarlist>
