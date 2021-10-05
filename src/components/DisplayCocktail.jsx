@@ -75,7 +75,6 @@ const DisplayCocktail = ({ cocktails, errorMessage, theme }) => {
 
 
   const handleAddFavorite = (cocktail) => {
-    console.log(cocktail.strDrink, '...has been added to favorites!!!')
     setFavoriteCocktails([...favoriteCocktails, cocktail]);
   }
 
