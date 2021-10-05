@@ -10,7 +10,6 @@ const Container = styled.div `
     align-items: center;
 
     @media screen and (min-width: 568px) and (orientation: landscape) {
-        height: 80vh;
         flex-direction: row;
     }
 `;
