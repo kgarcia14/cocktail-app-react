@@ -10,6 +10,7 @@ const Container = styled.div `
 
     @media screen and (min-width: 568px) and (orientation: landscape) {
         flex-direction: row;
+        height: 85vh;
     }
 `;
 
@@ -37,9 +38,12 @@ const H1 = styled.h1 `
         font-size: 2.7rem;
     }
 
+    @media screen and (min-width: 540px) {
+        padding: 0 80px;
+    }
+
     @media screen and (min-width: 768px) {
         font-size: 4rem;
-        padding: 0 80px;
     }
 
     @media screen and (min-width: 1024px) {
@@ -162,7 +166,7 @@ const Img = styled.img `
 const Home = ({ theme, toggleTheme }) => {
 
     return ( 
-        <Container className="home-container" style={theme === 'dark'? {backgroundColor: '#181a1b'} : {backgroundColor: '#fff'}}>
+        <Container className="home-container">
             <Button type="button" onClick={toggleTheme} style={theme === 'dark' ? {color: '#31d0aa'} : {color: '#6100FF'}}>{theme === 'dark' ? 'Go Light' : 'Go Dark'}</Button>
             <H1 className="home-h1" style={theme === 'dark'? {color: '#c4bfb7'} : {}}>Discover A World Of Delicious Cocktails.</H1>
             <ImgWrapper className="home-img-wrapper">

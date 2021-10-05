@@ -138,22 +138,21 @@ const Favorites = ({errorMessage, theme}) => {
     }
 
     return ( 
-        <Container  style={theme === 'dark' ? {backgroundColor: '#181a1b'} : {}}>
+        <Container>
             {favoriteCocktails.length < 1 ? (
                 <Heading>
-                  <H2 style={theme === 'dark' ? {color: '#c4bfb7'} : {}}>Add Some Cocktails To Your Favorites!</H2>
+                  <H2 style={theme === 'dark' ? {color: '#c4bfb7'} : {color: '#393939'}}>Add Some Cocktails To Your Favorites!</H2>
                 </Heading>
             ) : (
-            <Ul style={theme === 'dark' ? {backgroundColor: '#181a1b'} : {}}>
+            <Ul>
                 {favoriteCocktails.map((cocktail) => (
                     <Li key={cocktail.idDrink}>
                         <ImgWrapper>
-                            <H3 style={theme === 'dark' ? {color: '#c4bfb7'} : {}}>{cocktail.strDrink}</H3>
+                            <H3 style={theme === 'dark' ? {color: '#c4bfb7'} : {color: '#393939'}}>{cocktail.strDrink}</H3>
                             <Img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
                             <ImgContent>
-                            <CocktailModal cocktail={cocktail} errorMessage={errorMessage} />
-                            <Button type="button" onClick={() => handleDelete(cocktail.idDrink)}>Remove</Button>
-                            {/* <i class="fas fa-trash"></i> */}
+                              <CocktailModal cocktail={cocktail} errorMessage={errorMessage} />
+                              <Button type="button" onClick={() => handleDelete(cocktail.idDrink)}>Remove</Button>
                             </ImgContent>
                         </ImgWrapper>
                     </Li>

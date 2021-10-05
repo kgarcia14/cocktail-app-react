@@ -15,7 +15,7 @@ const H4 = styled.h4`
   margin: 150px 0 0 0;
 `;
 
-const H3 = styled.h4`
+const H3 = styled.h3`
   width: 100%;
   font-size: 1.5rem;
   font-weight: 500;
@@ -51,7 +51,7 @@ const Container = styled.div`
   margin: 0 15px 0 15px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 
   @media screen and (min-width: 768px) {
     margin: 0 15px 0 15px;
@@ -130,7 +130,7 @@ const style = {
   button: "1.2rem",
 };
 
-const CocktailModal = ({ cocktail, errorMessage }) => {
+const CocktailModal = ({ cocktail, errorMessage, theme }) => {
   const [cocktailDetails, setCocktailDetails] = useState([]);
   const [open, setOpen] = React.useState(false);
   const handleOpen = async (cocktail) => {
@@ -162,7 +162,7 @@ const CocktailModal = ({ cocktail, errorMessage }) => {
       {cocktailDetails === null ? (
         <H4>{errorMessage}</H4>
       ) : (
-        <div>
+        <>
           <ModalBtn onClick={() => handleOpen(cocktail)}>View Details</ModalBtn>
           <Modal
             aria-labelledby="transition-modal-title"
@@ -176,83 +176,83 @@ const CocktailModal = ({ cocktail, errorMessage }) => {
             }}
           >
             <Fade in={open}>
-              <Box sx={style}>
+              <Box sx={style} style={theme === 'dark' ? {backgroundColor: '#181a1b'} : {backgroundColor: '#fff'}}>
                 <CloseDiv>
                   <CloseBtn type="button" onClick={handleBtnClick}><Img src="../../images/cancel.svg" alt="close button"></Img></CloseBtn>
                 </CloseDiv>
                 <Typography id="transition-modal-description" sx={{ mt: 2 }}>
                   <Container>
-                    <H3>{cocktailDetails.strDrink}</H3>
+                    <H3 style={theme === 'dark' ? {color: '#c4bfb7'} : {color: '#393939'}}>{cocktailDetails.strDrink}</H3>
                     <Wrapper>
                       <Span>{cocktailDetails.strMeasure1}</Span>
-                      <P>{cocktailDetails.strIngredient1}</P>
+                      <P style={theme === 'dark' ? {color: '#c4bfb7'} : {color: '#393939'}}>{cocktailDetails.strIngredient1}</P>
                     </Wrapper>
                     <Wrapper>
                       <Span>{cocktailDetails.strMeasure2}</Span>
-                      <P>{cocktailDetails.strIngredient2}</P>
+                      <P style={theme === 'dark' ? {color: '#c4bfb7'} : {color: '#393939'}}>{cocktailDetails.strIngredient2}</P>
                     </Wrapper>
                     <Wrapper>
                       <Span>{cocktailDetails.strMeasure3}</Span>
-                      <P>{cocktailDetails.strIngredient3}</P>
+                      <P style={theme === 'dark' ? {color: '#c4bfb7'} : {color: '#393939'}}>{cocktailDetails.strIngredient3}</P>
                     </Wrapper>
                     <Wrapper>
                       <Span>{cocktailDetails.strMeasure4}</Span>
-                      <P>{cocktailDetails.strIngredient4}</P>
+                      <P style={theme === 'dark' ? {color: '#c4bfb7'} : {color: '#393939'}}>{cocktailDetails.strIngredient4}</P>
                     </Wrapper>
                     <Wrapper>
                       <Span>{cocktailDetails.strMeasure5}</Span>
-                      <P>{cocktailDetails.strIngredient5}</P>
+                      <P style={theme === 'dark' ? {color: '#c4bfb7'} : {color: '#393939'}}>{cocktailDetails.strIngredient5}</P>
                     </Wrapper>
                     <Wrapper>
                       <Span>{cocktailDetails.strMeasure6}</Span>
-                      <P>{cocktailDetails.strIngredient6}</P>
+                      <P style={theme === 'dark' ? {color: '#c4bfb7'} : {color: '#393939'}}>{cocktailDetails.strIngredient6}</P>
                     </Wrapper>
                     <Wrapper>
                       <Span>{cocktailDetails.strMeasure7}</Span>
-                      <P>{cocktailDetails.strIngredient7}</P>
+                      <P style={theme === 'dark' ? {color: '#c4bfb7'} : {color: '#393939'}}>{cocktailDetails.strIngredient7}</P>
                     </Wrapper>
                     <Wrapper>
                       <Span>{cocktailDetails.strMeasure8}</Span>
-                      <P>{cocktailDetails.strIngredient8}</P>
+                      <P style={theme === 'dark' ? {color: '#c4bfb7'} : {color: '#393939'}}>{cocktailDetails.strIngredient8}</P>
                     </Wrapper>
                     <Wrapper>
                       <Span>{cocktailDetails.strMeasure9}</Span>
-                      <P>{cocktailDetails.strIngredient9}</P>
+                      <P style={theme === 'dark' ? {color: '#c4bfb7'} : {color: '#393939'}}>{cocktailDetails.strIngredient9}</P>
                     </Wrapper>
                     <Wrapper>
                       <Span>{cocktailDetails.strMeasure10}</Span>
-                      <P>{cocktailDetails.strIngredient10}</P>
+                      <P style={theme === 'dark' ? {color: '#c4bfb7'} : {color: '#393939'}}>{cocktailDetails.strIngredient10}</P>
                     </Wrapper>
                     <Wrapper>
                       <Span>{cocktailDetails.strMeasure11}</Span>
-                      <P>{cocktailDetails.strIngredient11}</P>
+                      <P style={theme === 'dark' ? {color: '#c4bfb7'} : {color: '#393939'}}>{cocktailDetails.strIngredient11}</P>
                     </Wrapper>
                     <Wrapper>
                       <Span>{cocktailDetails.strMeasure12}</Span>
-                      <P>{cocktailDetails.strIngredient12}</P>
+                      <P style={theme === 'dark' ? {color: '#c4bfb7'} : {color: '#393939'}}>{cocktailDetails.strIngredient12}</P>
                     </Wrapper>
                     <Wrapper>
                       <Span>{cocktailDetails.strMeasure13}</Span>
-                      <P>{cocktailDetails.strIngredient13}</P>
+                      <P style={theme === 'dark' ? {color: '#c4bfb7'} : {color: '#393939'}}>{cocktailDetails.strIngredient13}</P>
                     </Wrapper>
                     <Wrapper>
                       <Span>{cocktailDetails.strMeasure14}</Span>
-                      <P>{cocktailDetails.strIngredient14}</P>
+                      <P style={theme === 'dark' ? {color: '#c4bfb7'} : {color: '#393939'}}>{cocktailDetails.strIngredient14}</P>
                     </Wrapper>
                     <Wrapper>
                       <Span>{cocktailDetails.strMeasure15}</Span>
-                      <P>{cocktailDetails.strIngredient15}</P>
+                      <P style={theme === 'dark' ? {color: '#c4bfb7'} : {color: '#393939'}}>{cocktailDetails.strIngredient15}</P>
                     </Wrapper>
                     <InstructionWrapper>
-                      <Label>Instructions</Label>
-                      <P>{cocktailDetails.strInstructions}</P>
+                      <Label style={theme === 'dark' ? {color: '#c4bfb7'} : {color: '#393939'}}>Instructions</Label>
+                      <P style={theme === 'dark' ? {color: '#c4bfb7'} : {color: '#393939'}}>{cocktailDetails.strInstructions}</P>
                     </InstructionWrapper>
                   </Container>
                 </Typography>
               </Box>
             </Fade>
           </Modal>
-        </div>
+        </>
       )}
     </>
   );
