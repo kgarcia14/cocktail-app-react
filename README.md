@@ -56,7 +56,7 @@ One of the bigger challenges I had was getting each unique cocktail to display i
 ### Screenshots
 
 **Light-Theme**
-
+<div>
 <img src="./public/images/cocktailhour-screenshots/light-home.jpg" width="85" height="170" alt="light theme home page"/>
 
 <img src="./public/images/cocktailhour-screenshots/light-emptysearch.jpg" width="85" height="170" alt="light theme home page"/>
@@ -72,6 +72,7 @@ One of the bigger challenges I had was getting each unique cocktail to display i
 <img src="./public/images/cocktailhour-screenshots/light-favcocktail.jpg" width="85" height="170" alt="light theme home page"/>
 
 <img src="./public/images/cocktailhour-screenshots/light-favorites.jpg" width="85" height="170" alt="light theme home page"/>
+</div>
 
 **Dark-Theme**
 
