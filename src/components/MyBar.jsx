@@ -196,6 +196,7 @@ const Img = styled.img`
 `;
 
 const Label = styled.label`
+  font-size: 1rem;
   margin: 0 0 5px 0;
   color: #393939;
 
