@@ -34,6 +34,8 @@ const Reload = styled.button`
 
 const Container = styled.div`
 
+height: 90vh;
+
 @media screen and (min-width: 568px) and (orientation: landscape) {
     display: flex;
     align-items: center;
