@@ -52,39 +52,39 @@ One of the bigger challenges I had was getting each unique cocktail to display i
 
 **Light-Theme**
 <div>
-<img src="./public/images/cocktailhour-screenshots/light-home.jpg" width="140" height="280" alt="light theme home page"/>
+<img src="./public/images/cocktailhour-screenshots/light-home.jpg" width="150" height="300" alt="light theme home page"/>
 
-<img src="./public/images/cocktailhour-screenshots/light-emptysearch.jpg" width="140" height="280" alt="light theme home page"/>
+<img src="./public/images/cocktailhour-screenshots/light-emptysearch.jpg" width="150" height="300" alt="light theme home page"/>
 
-<img src="./public/images/cocktailhour-screenshots/light-mybar.jpg" width="140" height="280" alt="light theme home page"/>
+<img src="./public/images/cocktailhour-screenshots/light-mybar.jpg" width="150" height="300" alt="light theme home page"/>
 
-<img src="./public/images/cocktailhour-screenshots/light-emptyfavorites.jpg" width="140" height="280" alt="light theme home page"/>
+<img src="./public/images/cocktailhour-screenshots/light-emptyfavorites.jpg" width="150" height="300" alt="light theme home page"/>
 
-<img src="./public/images/cocktailhour-screenshots/light-search-cocktail.jpg" width="140" height="280" alt="light theme home page"/>
+<img src="./public/images/cocktailhour-screenshots/light-search-cocktail.jpg" width="150" height="300" alt="light theme home page"/>
 
-<img src="./public/images/cocktailhour-screenshots/light-modal.jpg" width="140" height="280" alt="light theme home page"/>
+<img src="./public/images/cocktailhour-screenshots/light-modal.jpg" width="150" height="300" alt="light theme home page"/>
 
-<img src="./public/images/cocktailhour-screenshots/light-favcocktail.jpg" width="140" height="280" alt="light theme home page"/>
+<img src="./public/images/cocktailhour-screenshots/light-favcocktail.jpg" width="150" height="300" alt="light theme home page"/>
 
-<img src="./public/images/cocktailhour-screenshots/light-favorites.jpg" width="140" height="280" alt="light theme home page"/>
+<img src="./public/images/cocktailhour-screenshots/light-favorites.jpg" width="150" height="300" alt="light theme home page"/>
 </div>
 
 **Dark-Theme**
 
 <div>
-<img src="./public/images/cocktailhour-screenshots/dark-home.jpg" width="140" height="280" alt="dark theme home page"/>
+<img src="./public/images/cocktailhour-screenshots/dark-home.jpg" width="150" height="300" alt="dark theme home page"/>
 
-<img src="./public/images/cocktailhour-screenshots/dark-emptysearch.jpg" width="140" height="280" alt="dark theme empty search page"/>
+<img src="./public/images/cocktailhour-screenshots/dark-emptysearch.jpg" width="150" height="300" alt="dark theme empty search page"/>
 
-<img src="./public/images/cocktailhour-screenshots/dark-mybar.jpg" width="140" height="280" alt="dark theme my bar page"/>
+<img src="./public/images/cocktailhour-screenshots/dark-mybar.jpg" width="150" height="300" alt="dark theme my bar page"/>
 
-<img src="./public/images/cocktailhour-screenshots/dark-emptyfavorites.jpg" width="140" height="280" alt="dark theme empty favorites page"/>
+<img src="./public/images/cocktailhour-screenshots/dark-emptyfavorites.jpg" width="150" height="300" alt="dark theme empty favorites page"/>
 
-<img src="./public/images/cocktailhour-screenshots/dark-search-cocktail.jpg" width="140" height="280" alt="dark theme search page with cocktail results"/>
+<img src="./public/images/cocktailhour-screenshots/dark-search-cocktail.jpg" width="150" height="300" alt="dark theme search page with cocktail results"/>
 
-<img src="./public/images/cocktailhour-screenshots/dark-modal.jpg" width="140" height="280" alt="dark theme modal with cocktail details"/>
+<img src="./public/images/cocktailhour-screenshots/dark-modal.jpg" width="150" height="300" alt="dark theme modal with cocktail details"/>
 
-<img src="./public/images/cocktailhour-screenshots/dark-favcocktail.jpg" width="140" height="280" alt="dark theme favorited cocktail"/>
+<img src="./public/images/cocktailhour-screenshots/dark-favcocktail.jpg" width="150" height="300" alt="dark theme favorited cocktail"/>
 
-<img src="./public/images/cocktailhour-screenshots/dark-favorites.jpg" width="140" height="280" alt="dark theme favorites page"/>
+<img src="./public/images/cocktailhour-screenshots/dark-favorites.jpg" width="150" height="300" alt="dark theme favorites page"/>
 </div>
