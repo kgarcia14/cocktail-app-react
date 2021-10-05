@@ -101,15 +101,15 @@ const DisplayCocktail = ({ cocktails, errorMessage, theme }) => {
 }
   
   return (
-    <Container style={theme === 'dark' ? {backgroundColor: '#181a1b'} : {}}>
+    <Container>
     <Ul>
       {cocktails.map((cocktail) => (
         <Li key={cocktail.idDrink} id={cocktail.idDrink}>
           <ImgWrapper>
-            <H3 style={theme === 'dark' ? {color: '#c4bfb7'} : {}}>{cocktail.strDrink}</H3>
+            <H3 style={theme === 'dark' ? {color: '#c4bfb7'} : {color: '#393939'}}>{cocktail.strDrink}</H3>
             <Img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
             <ImgContent>
-              <CocktailModal cocktail={cocktail} errorMessage={errorMessage} />
+              <CocktailModal cocktail={cocktail} errorMessage={errorMessage} theme={theme}/>
 
               {ifExists(cocktail.idDrink) ? (
                 <Button type="button" onClick={() => handleDelete(cocktail.idDrink)} ><Img src="../../../images/favorites.svg"></Img></Button>

@@ -148,9 +148,9 @@ const Search = ({ theme }) => {
   };
 
   return (
-    <Container style={theme === 'dark'? {backgroundColor: '#181a1b'} : {backgroundColor: '#fff'}}>
-      <Form onSubmit={handleSubmit} style={theme === 'dark' ? {backgroundColor: '#181a1b'} : {}}>
-        <Label style={theme === 'dark' ? {color: '#31d0aa'} : {}}>
+    <Container>
+      <Form onSubmit={handleSubmit} style={theme === 'dark' ? {backgroundColor: '#181a1b'} : {backgroundColor: '#fff'}}>
+        <Label style={theme === 'dark' ? {color: '#31d0aa'} : {color: '#393939'}}>
           Search Cocktail
           <Input
             type="text"
