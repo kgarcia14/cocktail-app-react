@@ -5,15 +5,15 @@ const DarkMode = () => {
 
   const [theme, setTheme] = useState(localData);
 
+  theme === 'dark' ? document.body.style = 'background: #181a1b' : document.body.style = 'background: #fff'; 
+
   useEffect(() => {
     localStorage.setItem("theme", JSON.stringify(theme));
   }, [theme]);
 
   const toggleTheme = () => {
-
     theme === "light" ? setTheme("dark") : setTheme("light");
 
-    theme === "light" ? document.querySelector("body").classList.add("dark-body") : document.querySelector("body").classList.remove("dark-body");
   };
 
   return [theme, toggleTheme];
