@@ -38,16 +38,6 @@ The motivation for this project came from being around friends and wanting to tr
 One of the bigger challenges I had was getting each unique cocktail to display in the popup modal when "view details" was clicked. When I would click "view details" the first cocktail in the list would show regardless of which cocktail I was selecting. I was correct in passing down the mapped cocktail object as a prop into the modal. I thought this is all i needed in order to have access to it in the modal. However, I was not passing the cocktail prop into the modal function that opens the modal when button is clicked. After hours of debugging and googling, I was able to solve this. 
 
 
-**Technologies Used:**
-- [React](https://reactjs.org/)
-- [React-Router](https://reactrouter.com/)
-- [Styled-Components](https://styled-components.com/)
-- [TheCocktailDB API](https://www.thecocktaildb.com/)
-- [Axios](https://axios-http.com/docs/intro)
-- [Material UI](https://mui.com/)
-
-
-
 ### Screenshots
 
 **Light-Theme**
@@ -88,3 +78,24 @@ One of the bigger challenges I had was getting each unique cocktail to display i
 
 <img src="./public/images/cocktailhour-screenshots/dark-favorites.jpg" width="120" height="240" alt="dark theme favorites page"/>
 </div>
+
+### Features
+- Users can search for different cocktails by cocktail name or part of cocktail name.
+- Users can view cocktail recipe in a popup modal which contains cocktail ingredients as well as directions to make the cocktail.
+- Users can search for cocktails by the type of alcohol the cocktails contain. 
+- Users can save cocktails to "favorites" as well as remove them.
+- Users are able to view application in "dark mode" for a more comfortable viewing experience.
+
+
+**Technologies Used:**
+- [React](https://reactjs.org/)
+- [React-Router](https://reactrouter.com/)
+- [Styled-Components](https://styled-components.com/)
+- [TheCocktailDB API](https://www.thecocktaildb.com/)
+- [Axios](https://axios-http.com/docs/intro)
+- [Material UI](https://mui.com/)
+
+
+### API Reference
+Cocktail API: https://www.thecocktaildb.com/
+
